@@ -1,19 +1,90 @@
-@mixin h1 {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
+/* =========================================
+   Basic Reset / Normalize-lite
+   ========================================= */
+
+/* 1. ボックスサイズを border-box に統一 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@mixin h2 {
-  font-size: 22px;
-  font-weight: 700;
+/* 2. デフォルトの余白をリセット */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-@mixin h3 {
-  font-size: 16px;
-  font-weight: 700;
+/* 3. body の基本設定 */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* モバイルSafariの勝手な拡大を防止 */
 }
 
-@mixin sub {
-  font-size: 12px;
+/* 4. 画像などのメディアをコンテナに収める */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. フォーム要素のフォントを継承 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. ボタンのデフォルト装飾を少し抑える */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* 7. リストのマーカーを一旦消す（必要なところだけ後で指定） */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 8. aタグのデフォルトスタイル調整 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 9. テキストの折返しを安定させる */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 10. ルートのスタッキングコンテキストを安定させる */
+#root,
+#__next {
+  isolation: isolate;
 }

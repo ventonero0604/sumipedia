@@ -3,3 +3,15 @@
     @content;
   }
 }
+
+@mixin sp {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mid {
+  @media screen and (min-width: 769px) and (max-width: 950px) {
+    @content;
+  }
+}

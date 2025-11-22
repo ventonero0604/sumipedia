@@ -1,14 +1,45 @@
+@use './breakPoint.scss' as *;
+@use './pxvw.scss' as *;
+
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
+
+  @include sp {
+    font-size: vwsp(10);
+  }
+
+  @include pc {
+    font-size: vwpc(10);
+  }
 }
 
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: normal;
   position: relative;
-  background: #f5f5f5;
+  line-height: 1.6;
+  color: var(--text);
+  background: #f7f7f7;
+  font-size: 1.5rem;
+  background: center / contain repeat-y url('../../img/bg_pc.svg') #f7f7f7;
+  background-position-y: 80rem;
+
+  @include sp {
+    background: center / contain repeat-y url('../../img/bg_sp.svg') #f7f7f7;
+    background-position-y: 60rem;
+  }
+}
+
+.en {
+  font-family: 'Oswald', 'Noto Sans JP', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+main {
+  overflow: hidden;
 }
 
 a {
@@ -19,7 +50,7 @@ a {
 }
 
 small {
-  font-size: 12px;
+  font-size: 1.2rem; /* 12px (10px × 1.2) */
   font-weight: 400;
 }
 
@@ -45,15 +76,45 @@ button {
   }
 }
 
-input[type="text"],
-input[type="password"],
-input[type="tel"],
-input[type="url"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
+input[type='text'],
+input[type='password'],
+input[type='tel'],
+input[type='url'],
+input[type='email'],
+input[type='number'],
+input[type='search'],
 textarea,
 select[multiple],
 button {
   border: none;
+}
+
+.mincho {
+  font-family: 'Shippori Mincho', serif;
+}
+
+/* レスポンシブ表示制御 */
+.pc {
+  display: block;
+
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+
+  @include sp {
+    display: block;
+  }
+}
+
+/* スクロール制御 */
+.no-scroll {
+  position: fixed !important;
+  top: var(--scroll-top, 0) !important;
+  left: 0 !important;
+  width: 100% !important;
+  overflow: hidden !important;
 }

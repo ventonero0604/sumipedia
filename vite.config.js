@@ -20,7 +20,7 @@ const pageData = {
 const root = 'src';
 
 export default defineConfig({
-  base: "./",
+  base: './',
   server: {
     host: true //IPアドレスを有効化
   },
@@ -42,26 +42,27 @@ export default defineConfig({
           return `assets/${extType}/[name][extname]`;
         },
         chunkFileNames: 'assets/js/[name].js',
-        entryFileNames: 'assets/js/[name].js'
+        entryFileNames: 'assets/js/[name].js',
+        // 単一のバンドルを生成
+        manualChunks: undefined
       },
       input: {
-        index: resolve(__dirname, 'index.html'),
-        hoge: resolve(__dirname, 'hoge.html')
+        index: resolve(__dirname, root, 'index.html')
       }
     }
   },
   /*
     プラグインの設定を追加
   */
-    plugins: [
-      handlebars({
-        //コンポーネントの格納ディレクトリを指定
-        partialDirectory: resolve(__dirname, root, "components"),
-        //各ページ情報の読み込み
-        context(pagePath) {
-          const pageName = pagePath.split("/").pop();
-          return pageData[pageName];
-        },
-      }),
-    ],
+  plugins: [
+    handlebars({
+      //コンポーネントの格納ディレクトリを指定
+      partialDirectory: resolve(__dirname, root, 'components'),
+      //各ページ情報の読み込み
+      context(pagePath) {
+        const pageName = pagePath.split('/').pop();
+        return pageData[pageName];
+      }
+    })
+  ]
 });
