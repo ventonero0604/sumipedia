@@ -59,8 +59,8 @@ button {
 }
 
 /* 7. リストのマーカーを一旦消す（必要なところだけ後で指定） */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;

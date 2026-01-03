@@ -1,0 +1,72 @@
+.Card {
+  border-radius: 0.3rem;
+  background: #fff;
+  box-shadow: 0 0.2rem 0.2rem 0 rgba(185, 202, 209, 0.6);
+  overflow: hidden;
+
+  &_texts {
+    display: block;
+    width: 100%;
+
+    .price {
+      font-size: 1.2rem;
+
+      .fee {
+        color: #f82055;
+        font-size: 1.7rem;
+        font-weight: 700;
+      }
+      .en {
+        color: #f82055;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .manage {
+        color: #f82055;
+      }
+    }
+
+    .initialCosts {
+      display: flex;
+      gap: 1rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+    }
+
+    .text {
+      font-size: 1.1rem;
+    }
+  }
+
+  &_checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 1px solid #6a94a9;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    position: relative;
+    background: white;
+
+    &:checked {
+      background-color: var(--green);
+      border-color: var(--green);
+      background-image: url(../../img/ico-check.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 1rem;
+    }
+  }
+
+  &_favorite {
+    background: center/contain no-repeat url(../../img/ico-heart.svg);
+    &.-filled {
+      background-image: url(../../img/ico-heart-fill.svg);
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.CardRecommendLarge {
+  .title {
+    font-size: 1.3rem;
+    color: #666;
+    font-weight: 600;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main {
+    display: flex;
+    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+    background: #f9f9f9;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.6rem 0;
+    position: relative;
+
+    &:after {
+      width: 0.8rem;
+      height: 1.8rem;
+      display: block;
+      content: '';
+      background: center/contain no-repeat url(../../img/ico-arrow.svg);
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .image {
+      height: 10rem;
+      flex-shrink: 0;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .texts {
+      margin-top: 0.4rem;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  .content {
+    padding: 1.5rem;
+    position: relative;
+
+    .close {
+      width: 14.4rem;
+      height: 2.9rem;
+      display: block;
+      background: center/contain no-repeat url(../../img/ico-close-gallery-list.svg);
+      position: absolute;
+      top: 11rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    img {
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .thumb {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+
+      .image {
+        height: 10rem;
+        display: block;
+        padding-right: 1.3rem;
+        aspect-ratio: 151/100;
+        flex: 1;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .image + .image {
+        padding-right: unset;
+        padding-left: 1.3rem;
+        border-left: 1px solid #ccc;
+      }
+    }
+
+    .list {
+      display: flex;
+      gap: 1rem;
+      overflow-x: scroll;
+      margin-top: 1.8rem;
+      position: relative;
+
+      li {
+        flex-shrink: 0;
+        width: 15rem;
+        height: 15rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .Card_favorite {
+    width: 2.2rem;
+    height: 1.9rem;
+  }
+}

@@ -1,0 +1,21 @@
+.Label {
+  width: 1.7rem;
+  height: 1.7rem;
+  padding: 0.35rem 0.4rem 0.4rem 0.35rem;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: white;
+  border-radius: 0.3rem;
+
+  &-gray {
+    background: #adacac;
+  }
+  &-green {
+    background: var(--green);
+  }
+  &-orange {
+    background: var(--orange);
+  }
+}

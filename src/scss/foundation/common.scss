@@ -4,14 +4,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-
-  @include sp {
-    font-size: vwsp(10);
-  }
-
-  @include pc {
-    font-size: vwpc(10);
-  }
+  font-size: vwsp(10);
 }
 
 body {
@@ -20,22 +13,8 @@ body {
   line-height: normal;
   position: relative;
   line-height: 1.6;
-  color: var(--text);
-  background: #f7f7f7;
-  font-size: 1.5rem;
-  background: center / contain repeat-y url('../../img/bg_pc.svg') #f7f7f7;
-  background-position-y: 80rem;
-
-  @include sp {
-    background: center / contain repeat-y url('../../img/bg_sp.svg') #f7f7f7;
-    background-position-y: 60rem;
-  }
-}
-
-.en {
-  font-family: 'Oswald', 'Noto Sans JP', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  color: var(--black);
+  font-size: 1.4rem;
 }
 
 main {
@@ -49,11 +28,6 @@ a {
   }
 }
 
-small {
-  font-size: 1.2rem; /* 12px (10px × 1.2) */
-  font-weight: 400;
-}
-
 em {
   font-style: normal;
 }
@@ -64,10 +38,6 @@ img {
 
 a {
   text-decoration: none;
-
-  &:hover img {
-    transition: 0.2s;
-  }
 }
 
 button {
@@ -89,32 +59,10 @@ button {
   border: none;
 }
 
-.mincho {
-  font-family: 'Shippori Mincho', serif;
+.green {
+  color: var(--green);
 }
 
-/* レスポンシブ表示制御 */
-.pc {
-  display: block;
-
-  @include sp {
-    display: none;
-  }
-}
-
-.sp {
-  display: none;
-
-  @include sp {
-    display: block;
-  }
-}
-
-/* スクロール制御 */
-.no-scroll {
-  position: fixed !important;
-  top: var(--scroll-top, 0) !important;
-  left: 0 !important;
-  width: 100% !important;
-  overflow: hidden !important;
+.red {
+  color: #f82055;
 }

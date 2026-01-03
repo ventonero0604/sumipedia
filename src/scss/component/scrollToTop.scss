@@ -1,0 +1,16 @@
+.ScrollToTop {
+  background: white;
+  display: grid;
+  padding: 1rem;
+
+  &_button {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+
+    img {
+      width: 1.6rem;
+    }
+  }
+}

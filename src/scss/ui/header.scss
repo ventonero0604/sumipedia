@@ -1,0 +1,90 @@
+.Header {
+  background: var(--green);
+  color: white;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: relative;
+
+  .content {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .logo {
+    img {
+      height: 1.8rem;
+    }
+  }
+
+  .lead {
+    font-size: 0.9rem;
+    letter-spacing: -0.072px;
+    font-weight: normal;
+    line-height: 1;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+  }
+
+  .button {
+    a {
+      display: grid;
+      place-items: center;
+      font-size: 0.7rem;
+      line-height: 1.5rem;
+      position: relative;
+
+      .fav {
+        height: 1.7rem;
+      }
+
+      .history {
+        height: 1.8rem;
+      }
+
+      .count {
+        background: #f7808e;
+        color: white;
+        font-size: 0.8rem;
+        line-height: 1;
+        font-weight: 500;
+        padding: 0.2rem 0.3rem;
+        border: 1px solid white;
+        border-radius: 100vh;
+        position: absolute;
+        top: 0.4rem;
+        left: 2rem;
+        display: none;
+
+        &.is-show {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-contact {
+    .logo {
+      img {
+        height: 1.5rem;
+      }
+    }
+    .lead {
+      font-size: 0.8rem;
+    }
+  }
+}

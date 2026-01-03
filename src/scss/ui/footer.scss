@@ -1,0 +1,59 @@
+.Footer {
+  background: var(--green);
+  color: white;
+  height: 8.6rem;
+  display: grid;
+  align-items: center;
+
+  .wrapper {
+    display: grid;
+    gap: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    img {
+      height: 1.5rem;
+    }
+
+    .area {
+      font-size: 0.9rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+
+    li + li {
+      &:before {
+        content: '|';
+        font-size: 0.6rem;
+        margin: 0 0.6rem;
+      }
+    }
+
+    a {
+      font-size: 0.8rem;
+      line-height: 1;
+    }
+  }
+
+  small {
+    font-size: 0.8rem;
+  }
+}

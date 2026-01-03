@@ -6,12 +6,23 @@
 @use './foundation/pxvw.scss';
 
 /* component */
-@use './component/annotation.scss';
+@use './component/label.scss';
+@use './component/cta.scss';
+@use './component/sectionTitle.scss';
+@use './component/iconZoom.scss';
+@use './component/scrollToTop.scss';
 
 /* ui */
 @use './ui/header.scss';
+@use './ui/footer.scss';
+@use './ui/cardBase.scss';
+@use './ui/cardPropertyList.scss';
+@use './ui/cardRecommendLarge.scss';
+@use './ui/cardRecommendSmall.scss';
+@use './ui/cardFavoriteHistory.scss';
+@use './ui/cardSmall.scss';
+@use './ui/modal.scss';
 
-/* tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* page */
+@use './page/a1.scss';
+@use './page/a2.scss';

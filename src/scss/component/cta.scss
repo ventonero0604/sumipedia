@@ -1,0 +1,65 @@
+.Cta {
+  height: 3.1rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: white;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  background: var(--orange-1);
+  display: flex;
+  width: 100%;
+  font-weight: 800;
+
+  .free {
+    background: var(--orange-2);
+    height: 100%;
+    font-size: 1.1rem;
+    width: 4.6rem;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    i {
+      background: white;
+      width: 1.6rem;
+      height: 1.1rem;
+      border-radius: 0.1rem;
+      background-image: url(../../img/ico-mail-flip.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top -0.2rem;
+    }
+  }
+
+  &-large {
+    height: 5rem;
+    font-size: 1.4rem;
+
+    .free {
+      width: 5.6rem;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+
+    .free {
+      background: #949494;
+    }
+
+    .text {
+      background: #bbb;
+      i {
+        background-image: url(../../img/ico-mail-flip-gray.svg);
+      }
+    }
+  }
+}

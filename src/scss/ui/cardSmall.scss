@@ -1,0 +1,83 @@
+.CardSmall {
+  .main {
+    display: flex;
+    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+    background: #f9f9f9;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.2rem 2rem;
+    position: relative;
+
+    .label {
+      border-radius: 0.2rem;
+      background: #f7808e;
+      color: white;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      line-height: 1;
+      font-weight: bold;
+      display: grid;
+      place-items: center;
+    }
+
+    .image {
+      flex-shrink: 0;
+      width: 7rem;
+      height: 7rem;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .texts {
+      margin-top: 0.4rem;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .expand {
+      background: #adadad;
+      font-size: 1.2rem;
+      font-weight: bold;
+      width: 6.8rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      color: white;
+      gap: 1rem;
+      border-radius: 0.4rem;
+      transition: all 0.3s;
+      position: absolute;
+      right: 1.2rem;
+      bottom: 1.2rem;
+
+      img {
+        width: 0.8rem;
+        position: absolute;
+        left: 0.9rem;
+        top: 0.7rem;
+        transition: all 0.3s;
+      }
+
+      span {
+        position: absolute;
+        text-align: center;
+        width: 3rem;
+        white-space: nowrap;
+        left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &.is-show {
+        img {
+          transform: rotate(-180deg);
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
