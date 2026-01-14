@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header class="Header">
+    <div class="content">
+      <h1 class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+      </h1>
+      <h2 class="lead">
+        埼玉県の賃貸物件サイト
+      </h2>
+    </div>
+    <ul class="buttons">
+      <li class="button">
+        <a href="#">
+          <img src="./img/ico-fav.svg" alt="" class="fav">
+          <span class="count js-fav-count">10</span>
+          お気に入り
+        </a>
+      </li>
+      <li class="button">
+        <a href="#">
+          <img src="./img/ico-history.svg" alt="" class="history">
+          閲覧履歴
+        </a>
+      </li>
+    </ul>
+  </header>
+  <main class="A1">
+    <section class="A1_header">
+      <h2 class="SectionTitle">
+        大宮駅の賃貸物件情報
+      </h2>
+      <ul class="selected">
+        <li>
+          <img src="./img/ico-train.svg" alt="">
+          <div class="texts">
+            <p class="text">
+              大宮,浦和,川口
+            </p>
+            <a href="/">変更する</a>
+          </div>
+        </li>
+        <li>
+          <img src="./img/ico-checked.svg" alt="">
+          <div class="texts">
+            <p class="text">
+              大宮,浦和,川口
+            </p>
+            <a href="/">変更する</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="A1_items">
+      <div class="header">
+        <select name="sort" id="sort" class="sort js-sort">
+          <option value="recommended">あなたへのおすすめ順</option>
+          <option value="cost-performance">コスパが高い順</option>
+          <option value="rent-low">家賃が安い順（賃料＋管理費）</option>
+          <option value="rent-high">家賃が高い順（賃料＋管理費）</option>
+          <option value="new-building">築年数が浅い順</option>
+          <option value="space-large">部屋が広い順</option>
+          <option value="latest">新着順</option>
+          <option value="station-close">駅に近い順</option>
+        </select>
+        <small class="js-note js-recommended">
+          ※「あなたへのおすすめ順」は、AIがあなたにぴったりの物件を順番にご提案します
+        </small>
+        <small class="js-note js-cost-performance">
+          ※当サイトにおける「コスパ」は、各物件の広さ・最寄駅への徒歩分数・賃料から独自ロジックで算出しています
+        </small>
+      </div>
+
+      <div class="items">
+        <article class="Card CardPropertyList">
+          <h3 class="title">
+            中野林戸建
+          </h3>
+          <div class="main">
+            <figure class="image">
+              <img src="./img/dummy/thumb.png" alt="">
+            </figure>
+            <div class="texts">
+              <p class="text">
+                JR京浜東北線/大宮駅 バス12分 (バス停)観音寺前 歩6分
+              </p>
+              <p class="text">
+                埼玉県さいたま市西区大字中野林 築30年 / 3階建
+              </p>
+            </div>
+          </div>
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" class="Checkbox" id="fav-1" name="fav-1">
+            </div>
+            <div class="info">
+              <div class="detail">
+                <a class="layout IconZoom js-imageModal">
+                  <img src="./img/dummy/layout.png" alt="">
+                </a>
+                <a href="#" class="Card_texts">
+                  <p class="price">
+                    <span class="fee">18.5</span>
+                    <span class="en">万円</span>
+                    (管理費<span class="manage">なし</span>)
+                  </p>
+                  <ul class="initialCosts">
+                    <li>
+                      <span class="Label Label-gray">敷</span>
+                      9.6万円
+                    </li>
+                    <li class="green">
+                      <span class="Label Label-green">礼</span>
+                      0円
+                    </li>
+                  </ul>
+                  <p class="text">
+                    272.84㎡/ 6LDK / 1-3階
+                  </p>
+                </a>
+              </div>
+              <div class="actions">
+                <a href="#" class="Cta">
+                  <span class="free">
+                    無料
+                  </span>
+                  <span class="text">
+                    <i>
+                    </i>
+                    空室状況をお問い合わせ
+                  </span>
+                </a>
+                <button class="Favorite js-favorite" type="button"></button>
+              </div>
+              <p class="suggest is-show js-suggest">
+                お気に入りに追加して他の物件と比較してみませんか？
+              </p>
+            </div>
+        
+          </div>
+        </article>        <article class="Card CardPropertyList">
+          <h3 class="title">
+            中野林戸建
+          </h3>
+          <div class="main">
+            <figure class="image">
+              <img src="./img/dummy/thumb.png" alt="">
+            </figure>
+            <div class="texts">
+              <p class="text">
+                JR京浜東北線/大宮駅 バス12分 (バス停)観音寺前 歩6分
+              </p>
+              <p class="text">
+                埼玉県さいたま市西区大字中野林 築30年 / 3階建
+              </p>
+            </div>
+          </div>
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" class="Checkbox" id="fav-1" name="fav-1">
+            </div>
+            <div class="info">
+              <div class="detail">
+                <a class="layout IconZoom js-imageModal">
+                  <img src="./img/dummy/layout.png" alt="">
+                </a>
+                <a href="#" class="Card_texts">
+                  <p class="price">
+                    <span class="fee">18.5</span>
+                    <span class="en">万円</span>
+                    (管理費<span class="manage">なし</span>)
+                  </p>
+                  <ul class="initialCosts">
+                    <li>
+                      <span class="Label Label-gray">敷</span>
+                      9.6万円
+                    </li>
+                    <li class="green">
+                      <span class="Label Label-green">礼</span>
+                      0円
+                    </li>
+                  </ul>
+                  <p class="text">
+                    272.84㎡/ 6LDK / 1-3階
+                  </p>
+                </a>
+              </div>
+              <div class="actions">
+                <a href="#" class="Cta">
+                  <span class="free">
+                    無料
+                  </span>
+                  <span class="text">
+                    <i>
+                    </i>
+                    空室状況をお問い合わせ
+                  </span>
+                </a>
+                <button class="Favorite js-favorite" type="button"></button>
+              </div>
+              <p class="suggest is-show js-suggest">
+                お気に入りに追加して他の物件と比較してみませんか？
+              </p>
+            </div>
+        
+          </div>
+        </article>
+        <p class="end">
+          すべての物件を表示しました
+        </p>
+      </div>
+    </section>
+
+    <section class="A1_conditions">
+      <div class="wrapper">
+        <h3 class="SectionTitle">賃料条件を変更する</h3>
+        <div class="button-group" id="rentGroup"><button class="option-button js-option-button">指定なし</button><button
+            class="option-button js-option-button">4万円以下</button><button
+            class="option-button js-option-button">4〜6万円</button><button
+            class="option-button js-option-button">6〜8万円</button><button
+            class="option-button js-option-button">8〜10万円</button><button
+            class="option-button js-option-button">10〜12万円</button><button
+            class="option-button js-option-button">12〜14万円</button><button
+            class="option-button js-option-button">14万円以上</button></div>
+
+      </div>
+      <div class="wrapper">
+        <h3 class="SectionTitle">間取り条件を変更する</h3>
+        <div class="button-group" id="layoutGroup"><button
+            class="option-button js-option-button selected">指定なし</button><button
+            class="option-button js-option-button">ワンルーム</button><button
+            class="option-button js-option-button">1K</button><button
+            class="option-button js-option-button">1DK</button><button
+            class="option-button js-option-button">1LDK</button><button
+            class="option-button js-option-button">2K</button><button
+            class="option-button js-option-button">2DK</button><button
+            class="option-button js-option-button">2LDK</button><button
+            class="option-button js-option-button">3K</button><button
+            class="option-button js-option-button">3DK</button><button
+            class="option-button js-option-button">3LDK</button><button
+            class="option-button js-option-button">4K</button><button
+            class="option-button js-option-button">4DK</button><button
+            class="option-button js-option-button">4LDK</button><button
+            class="option-button js-option-button">5K以上</button></div>
+      </div>
+      <div class="wrapper">
+        <h3 class="SectionTitle">駅徒歩条件を変更する</h3>
+        <div class="button-group" id="stationGroup"><button class="option-button js-option-button">指定なし</button><button
+            class="option-button js-option-button">1分以内</button><button
+            class="option-button js-option-button">3分以内</button><button
+            class="option-button js-option-button">5分以内</button><button
+            class="option-button js-option-button">7分以内</button><button
+            class="option-button js-option-button">10分以内</button><button
+            class="option-button js-option-button selected">15分以内</button><button
+            class="option-button js-option-button">20分以内</button></div>
+      </div>
+      <div class="wrapper">
+        <h3 class="SectionTitle">人気のこだわり条件を追加する</h3>
+        <div class="button-group" id="featuresGroup"><button
+            class="option-button js-option-button">バス・トイレ別</button><button
+            class="option-button js-option-button">2階以上</button><button
+            class="option-button js-option-button">駐車場あり</button><button
+            class="option-button js-option-button">エアコン付き</button><button
+            class="option-button js-option-button">室内洗濯機置場</button><button
+            class="option-button js-option-button">洗面所独立</button><button
+            class="option-button js-option-button">オートロック</button><button
+            class="option-button js-option-button selected">ペット相談可</button><button
+            class="option-button js-option-button">コンロ2口以上</button><button
+            class="option-button js-option-button">TVモニタ付きインタホン</button><button
+            class="option-button js-option-button">温水洗浄便座</button><button
+            class="option-button js-option-button">都市ガス</button></div>
+        <button id="otherConditions" class="other-button">他の条件も設定する</button>
+      </div>
+    </section>
+
+    <div class="A1_sticky">
+      <p class="text">✓選択した物件<span class="js-total">3</span>件に</p>
+      <a href="#" class="button">まとめて問い合わせる(無料)</a>
+    </div>
+  </main>
+
+  <footer class="Footer">
+    <div class="wrapper">
+      <div class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+        <p class="area">
+          東京版
+        </p>
+      </div>
+      <div class="content">
+        <ul class="list">
+          <li>
+            <a href="#">
+              運営会社
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              利用規約
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              プライバシーポリシー
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+        <small>
+          ©住みペディア
+        </small>
+      </div>
+    </div>
+  </footer>  
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

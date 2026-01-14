@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header class="Header">
+    <div class="content">
+      <h1 class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+      </h1>
+      <h2 class="lead">
+        埼玉県の賃貸物件サイト
+      </h2>
+    </div>
+    <ul class="buttons">
+      <li class="button">
+        <a href="#">
+          <img src="./img/ico-fav.svg" alt="" class="fav">
+          <span class="count js-fav-count">10</span>
+          お気に入り
+        </a>
+      </li>
+      <li class="button">
+        <a href="#">
+          <img src="./img/ico-history.svg" alt="" class="history">
+          閲覧履歴
+        </a>
+      </li>
+    </ul>
+  </header>
+  <main class="B6">
+    <h2 class="SectionTitle">
+      詳細条件の追加
+    </h2>
+
+    <section class="B6_content">
+      <h3 class="B6_title">
+        設定した条件：
+      </h3>
+      <div class="B6_card B6_card-condition">
+        <ul class="B6_labels">
+          <li class="B6_label">
+            ワンルーム
+          </li>
+          <li class="B6_label">
+            ワンルーム
+          </li>
+          <li class="B6_label">
+            ワンルーム
+          </li>
+          <li class="B6_label">
+            ワンルーム
+          </li>
+          <li class="B6_label">
+            1K
+          </li>
+        </ul>
+        <button class="B6_reset">
+          検索条件<br>
+          リセット
+        </button>
+      </div>
+    </section>
+
+    <section class="B6_content">
+      <h3 class="B6_title">
+        賃料
+      </h3>
+      <div class="B6_card">
+        <div class="slider">
+          <div class="slider-range">
+            <div class="slider-price">
+              <div class="slider-price__val" id="rlPrice">下限なし</div>
+              <div class="slider-price__val">～</div>
+              <div class="slider-price__val" id="ruPrice">上限なし</div>
+            </div>
+          </div>
+          <div class="slider-range">
+            <div id="range"></div>
+          </div>
+          <div class="slider-range">
+            <ul class="slider-scale">
+              <li class="slider-price__scale">3万円以下</li>
+              <li class="slider-price__scale">15万円</li>
+              <li class="slider-price__scale">100万円以上</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="B6_checkboxes mt-5">
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">共益費／管理費を含む</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">駐車場代を含む</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">敷金･保証金なし</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">礼金なし</span>
+          </label>
+        </div>
+
+        <h4 class="SectionTitle my-4">
+          お得条件
+        </h4>
+
+        <div class="B6_checkboxes">
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">フリーレント</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">特定優良賃貸</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">インターネット無料</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">保証人不要</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="B6_content">
+      <h3 class="B6_title">
+        間取り
+      </h3>
+      <div class="B6_card">
+        <div class="B6_checkboxes">
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">ワンルーム</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">1K</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">1DK</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">1LDK</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">2K</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">2DK</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">2LDK</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">3K</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">3DK</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">3LDK</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">4K</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">4DK</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">4LDK</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">5K以上</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="B6_content">
+      <h3 class="B6_title">
+        駅からの徒歩分数
+      </h3>
+      <div class="B6_card">
+        <div class="slider">
+          <div class="slider-range">
+            <div class="slider-price">
+              <div class="slider-price__val" id="wkTime">指定なし</div>
+            </div>
+          </div>
+          <div class="slider-range">
+            <div id="range-walking"></div>
+          </div>
+          <div class="slider-range">
+            <ul class="slider-scale">
+              <li class="slider-price__scale">1分以内</li>
+              <li class="slider-price__scale">7分以内</li>
+              <li class="slider-price__scale">指定なし</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="B6_content">
+      <h3 class="B6_title">
+        築年数・構造
+      </h3>
+      <div class="B6_card">
+        <div class="slider">
+          <div class="slider-range">
+            <div class="slider-price">
+              <div class="slider-price__val" id="buildingAge">指定なし</div>
+            </div>
+          </div>
+          <div class="slider-range">
+            <div id="range-building"></div>
+          </div>
+          <div class="slider-range">
+            <ul class="slider-scale">
+              <li class="slider-price__scale">新築</li>
+              <li class="slider-price__scale">10年以内</li>
+              <li class="slider-price__scale">指定なし</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="B6_content">
+      <h3 class="B6_title">
+        専有面積
+      </h3>
+      <div class="B6_card">
+        <div class="slider">
+          <div class="slider-range">
+            <div class="slider-price">
+              <div class="slider-price__val" id="alArea">下限なし</div>
+              <div class="slider-price__val">～</div>
+              <div class="slider-price__val" id="auArea">上限なし</div>
+            </div>
+          </div>
+          <div class="slider-range">
+            <div id="range-area"></div>
+          </div>
+          <div class="slider-range">
+            <ul class="slider-scale">
+              <li class="slider-price__scale">20㎡以下</li>
+              <li class="slider-price__scale">50㎡</li>
+              <li class="slider-price__scale">100㎡以上</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="B6_content">
+      <h3 class="B6_title">
+        人気のこだわり条件
+      </h3>
+      <div class="B6_card">
+        <div class="B6_checkboxes">
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">バス･トイレ別</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">2階以上</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">駐車場あり</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">ペット相談可</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">室内洗濯機置場</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">エアコン付</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">洗面所独立</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">オートロック</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">コンロ2口以上</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">TVモニタ付インタホン</span>
+          </label>
+          <label class="B6_checkbox">
+            <input class="Checkbox" type="checkbox" id="" name="" value="">
+            <span class="B6_checkbox_text">温水洗浄便座</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <div class="B6_expand js-expand">
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          建物の種類
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">マンション</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">2アパート</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">一戸建て・その他</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          建物設備
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">駐車場あり</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">駐輪場あり</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">バイク置場あり</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">エレベーター</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">宅配ボックス</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">敷地内ゴミ置場</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">バルコニー付</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">ルーフバルコニー付き</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">専用庭</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">都市ガス</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          位置
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">2階以上</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">最上階</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">角部屋</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">南向き</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          セキュリティ
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">オートロック</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">管理人あり</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">TVモニタ付きインタホン</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          方位
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">北</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">北東</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">東</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">南東</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">南</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">南西</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">西</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">北西</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          キッチン
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">ガスコンロ対応</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">IHコンロ</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">コンロ2口以上</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">オール電化</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">システムキッチン</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          バス・トイレ
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">バス・トイレ別</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">温水洗浄便座</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">浴室乾燥機</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">追い炊き風呂</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          テレビ・通信
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">インターネット接続可</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">BSアンテナ</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">CSアンテナ</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">ケーブルテレビ</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">インターネット無料</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          冷暖房
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">エアコン付き</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">床暖房</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          収納
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">床下収納</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">シューズボックス</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">トランクルーム</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text whitespace-nowrap">ウォーキングクローゼット</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          その他室内設備
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">室内洗濯機置場</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">洗面所独立</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">フローリング</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">メゾネット</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">ロフト</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">防音室</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">地下室</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          リフォーム・リノベーション
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">リフォーム済み</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">リノベーション物件</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          入居条件
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">即入居可</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">ペット相談可</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">楽器相談可</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">事務所利用可</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">ルームシェア可</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">定期借家を含まない</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          その他
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">デザイナーズ物件</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">IT重説　対応物件</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">分譲賃貸</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">保証人不要</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">タワーマンション</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="B6_content">
+        <h3 class="B6_title">
+          表示情報
+        </h3>
+        <div class="B6_card">
+          <div class="B6_checkboxes">
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">本日の新着物件</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">新着(2-7日前)</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">間取図付き</span>
+            </label>
+            <label class="B6_checkbox">
+              <input class="Checkbox" type="checkbox" id="" name="" value="">
+              <span class="B6_checkbox_text">写真着き</span>
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <button class="Button-all-condition js-expand-button">
+      全てのこだわり条件
+    </button>
+
+    <div class="B6_buttons js-buttons">
+      <a href="#" class="Button Button-action">
+        検索
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="Footer">
+    <div class="wrapper">
+      <div class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+        <p class="area">
+          東京版
+        </p>
+      </div>
+      <div class="content">
+        <ul class="list">
+          <li>
+            <a href="#">
+              運営会社
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              利用規約
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              プライバシーポリシー
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+        <small>
+          ©住みペディア
+        </small>
+      </div>
+    </div>
+  </footer>  
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

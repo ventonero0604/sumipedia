@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header class="Header">
+    <div class="content">
+      <h1 class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+      </h1>
+      <h2 class="lead">
+        埼玉県の賃貸物件サイト
+      </h2>
+    </div>
+    <ul class="buttons">
+      <li class="button">
+        <a href="#">
+          <img src="./img/ico-fav.svg" alt="" class="fav">
+          <span class="count js-fav-count">10</span>
+          お気に入り
+        </a>
+      </li>
+      <li class="button">
+        <a href="#">
+          <img src="./img/ico-history.svg" alt="" class="history">
+          閲覧履歴
+        </a>
+      </li>
+    </ul>
+  </header>
+  <main class="C1">
+    <div class="C1_header">
+      <h2 class="SectionTitle">
+        お気に入り物件を比較
+      </h2>
+      <div class="C1_header_wrapper">
+        <a href="#" class="button is-disabled js-contact-button">まとめてお問い合わせ(無料)</a>
+      </div>
+    </div>
+
+    <section class="C1_content">
+      <div class="C1_content_texts">
+        <p>
+          選択中の都道府県の物件はまとめてお問い合わせできます
+        </p>
+        <small>
+          お気に入り登録したデータは90日間保存されます<br>
+          ※掲載終了となった物件は自動的に削除されます
+        </small>
+      </div>
+
+      <div class="C1_content_items">
+        <article class="Card CardFavoriteHistory">
+          <label class="title">
+            <input type="checkbox" class="Checkbox" id="fav-1" name="fav-1">
+            中野林戸建
+          </label>
+          <a href="#" class="main">
+            <div class="container">
+              <figure class="image">
+                <img src="./img/dummy/thumb.png" alt="">
+              </figure>
+            </div>
+            <div class="Card_texts">
+              <p class="price">
+                <span class="fee">18.5</span>
+                <span class="en">万円</span>
+                (管理費<span class="manage">なし</span>)
+              </p>
+              <ul class="initialCosts">
+                <li>
+                  <span class="Label Label-gray">敷</span>
+                  9.6万円
+                </li>
+                <li class="green">
+                  <span class="Label Label-green">礼</span>
+                  0円
+                </li>
+              </ul>
+              <div class="texts">
+                <p class="text">
+                  272.84㎡ / 6LDK / 1-3階
+                </p>
+                <p class="text">
+                  JR京浜東北線/大宮駅 バス12分
+                </p>
+                <p class="text">
+                  (バス停)観音寺前 歩6分
+                </p>
+        
+              </div>
+            </div>
+          </a>
+          <div class="actions">
+            <a href="#" class="Cta Cta-large">
+              <span class="free">
+                無料
+              </span>
+              <span class="text">
+                <i>
+                </i>
+                空室状況をお問い合わせ
+              </span>
+            </a>
+            <button class="Favorite js-favorite" type="button"></button>
+          </div>
+        
+        </article>        <article class="Card CardFavoriteHistory">
+          <label class="title">
+            <input type="checkbox" class="Checkbox" id="fav-1" name="fav-1">
+            中野林戸建
+          </label>
+          <a href="#" class="main">
+            <div class="container">
+              <figure class="image">
+                <img src="./img/dummy/thumb.png" alt="">
+              </figure>
+            </div>
+            <div class="Card_texts">
+              <p class="price">
+                <span class="fee">18.5</span>
+                <span class="en">万円</span>
+                (管理費<span class="manage">なし</span>)
+              </p>
+              <ul class="initialCosts">
+                <li>
+                  <span class="Label Label-gray">敷</span>
+                  9.6万円
+                </li>
+                <li class="green">
+                  <span class="Label Label-green">礼</span>
+                  0円
+                </li>
+              </ul>
+              <div class="texts">
+                <p class="text">
+                  272.84㎡ / 6LDK / 1-3階
+                </p>
+                <p class="text">
+                  JR京浜東北線/大宮駅 バス12分
+                </p>
+                <p class="text">
+                  (バス停)観音寺前 歩6分
+                </p>
+        
+              </div>
+            </div>
+          </a>
+          <div class="actions">
+            <a href="#" class="Cta Cta-large">
+              <span class="free">
+                無料
+              </span>
+              <span class="text">
+                <i>
+                </i>
+                空室状況をお問い合わせ
+              </span>
+            </a>
+            <button class="Favorite js-favorite" type="button"></button>
+          </div>
+        
+        </article>      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer class="Footer">
+    <div class="wrapper">
+      <div class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+        <p class="area">
+          東京版
+        </p>
+      </div>
+      <div class="content">
+        <ul class="list">
+          <li>
+            <a href="#">
+              運営会社
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              利用規約
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              プライバシーポリシー
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+        <small>
+          ©住みペディア
+        </small>
+      </div>
+    </div>
+  </footer>  
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
