@@ -3,5 +3,5 @@
 }
 
 @function vwpc($pxValue) {
-  @return calc($pxValue / 1680) * 100vw;
+  @return calc($pxValue / 1200) * 100vw;
 }

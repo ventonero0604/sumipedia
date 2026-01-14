@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
-
 import { resolve } from 'path';
+import fs from 'fs';
 
 //handlebarsプラグインimport
 import handlebars from 'vite-plugin-handlebars';
@@ -10,14 +10,26 @@ const pageData = {
   'index.html': {
     isHome: true,
     title: 'Main Page'
-  },
-  'hoge.html': {
-    isHome: false,
-    title: 'Hoge'
   }
 };
 
 const root = 'src';
+
+// srcディレクトリ内のHTMLファイルを取得してinputオブジェクトを生成
+const getHtmlInputs = () => {
+  const srcPath = resolve(__dirname, root);
+  const files = fs.readdirSync(srcPath);
+  const htmlInputs = {};
+
+  files.forEach(file => {
+    if (file.endsWith('.html')) {
+      const key = file.replace('.html', '');
+      htmlInputs[key] = resolve(srcPath, file);
+    }
+  });
+
+  return htmlInputs;
+};
 
 export default defineConfig({
   base: './',
@@ -46,9 +58,7 @@ export default defineConfig({
         // 単一のバンドルを生成
         manualChunks: undefined
       },
-      input: {
-        index: resolve(__dirname, root, 'index.html')
-      }
+      input: getHtmlInputs()
     }
   },
   /*

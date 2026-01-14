@@ -1,0 +1,226 @@
+.D3 {
+  background: #eef4f7;
+  padding: 2rem 1.5rem 3rem;
+  display: grid;
+  gap: 1.6rem;
+  font-size: 1.2rem;
+
+  &_container {
+    background: white;
+    padding: 2rem 0.7rem;
+
+    &_title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+
+      &_apply {
+        margin-bottom: 2rem;
+
+        .is-apply & {
+          display: block;
+        }
+        .is-confirm & {
+          display: none;
+        }
+      }
+
+      &_confirm {
+        margin-bottom: 2rem;
+
+        .is-apply & {
+          display: none;
+        }
+        .is-confirm & {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &_list {
+    padding: 0 0 2rem;
+
+    &-border {
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    & + & {
+      margin-top: 2rem;
+    }
+
+    &_header {
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+
+      &_title {
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-left: -2rem;
+
+        &_border {
+          font-weight: bold;
+          font-size: 1.6rem;
+          border-bottom: 1px solid #eeeeee;
+          padding-bottom: 1rem;
+          text-align: center;
+        }
+      }
+    }
+
+    &_content {
+      background: #f5f5f5;
+      padding: 1rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .confirm {
+      display: none;
+
+      .thumb {
+        width: 6.3rem;
+        height: 10rem;
+        background: #d9d9d9;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &_upload_input {
+    display: none;
+  }
+
+  &_upload_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.5rem;
+    height: 2.7rem;
+    background: var(--green);
+    color: white;
+    border-radius: 100vh;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    .is-confirm & {
+      display: none;
+    }
+  }
+
+  &_form {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    &_label {
+      font-weight: bold;
+      font-size: 1.4rem;
+      display: block;
+    }
+
+    &_select {
+      border: 1px solid #b4c9d4;
+      width: 100%;
+      height: 3.5rem;
+      border-radius: 0.4rem;
+      font-size: 1.3rem;
+      padding: 0 1rem;
+      appearance: none;
+      background-image: url(../../img/ico-arrow-bottom-green.svg);
+      background-repeat: no-repeat;
+      background-size: 1.8rem 0.8rem;
+      background-position: right 1rem center;
+      font-weight: 500;
+
+      &:invalid {
+        color: #e0e0e0;
+      }
+
+      option {
+        color: var(--text);
+      }
+
+      &[disabled] {
+        color: #adacac;
+        background: #f8f8f8;
+      }
+    }
+
+    &_radio {
+      display: flex;
+      gap: 2rem;
+      font-size: 1.6rem;
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+      }
+
+      input {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 1.6rem;
+        height: 1.6rem;
+        border: 2px solid var(--green);
+        border-radius: 50%;
+        background: white;
+        cursor: pointer;
+        position: relative;
+
+        &:checked {
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.8rem;
+            height: 0.8rem;
+            background: var(--green);
+            border-radius: 50%;
+          }
+        }
+
+        &[disabled] {
+          border-color: #adacac;
+
+          &:checked::after {
+            background: #adacac;
+          }
+        }
+      }
+    }
+
+    &_input {
+      border: 1px solid #b4c9d4 !important;
+      width: 100%;
+      height: 3.5rem;
+      border-radius: 0.4rem;
+      font-size: 1.3rem;
+      padding: 0 1rem;
+      background: #f8f8f8;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      appearance: none;
+
+      &[disabled] {
+        color: #adacac;
+      }
+    }
+
+    &_group {
+      display: grid;
+      gap: 0.5rem;
+    }
+  }
+}

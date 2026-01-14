@@ -1,0 +1,100 @@
+.C1 {
+  &_header {
+    padding: 1.2rem 1rem;
+
+    .SectionTitle {
+      height: 4.4rem;
+    }
+
+    &_wrapper {
+      padding: 0 1rem 1rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    &_num {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+
+      img {
+        width: 1.9rem;
+      }
+    }
+
+    select {
+      border: 1px solid #b4c9d4;
+      width: 100%;
+      height: 3.5rem;
+      border-radius: 0.4rem;
+      font-size: 1.3rem;
+      padding: 0 1rem;
+      appearance: none;
+      background-image: url(../../img/ico-arrow-bottom-green.svg);
+      background-repeat: no-repeat;
+      background-size: 1.8rem 0.8rem;
+      background-position: right 1rem center;
+      font-weight: 500;
+    }
+
+    .button {
+      height: 4.7rem;
+      border-radius: 0.4rem;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: white;
+      font-size: 1.4rem;
+      font-weight: bold;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 1.2rem solid transparent;
+        border-right: 1.2rem solid transparent;
+        border-top: 1.2rem solid var(--green);
+      }
+
+      &.is-disabled {
+        background: #b9b9b9;
+        pointer-events: none;
+        &:after {
+          border-top-color: #b9b9b9;
+        }
+      }
+    }
+  }
+
+  &_content {
+    background: #eef4f7;
+    padding: 1.5rem 0.8rem 3rem;
+    display: grid;
+    gap: 1.5rem;
+
+    &_texts {
+      display: grid;
+      gap: 1rem;
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      small {
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+    }
+
+    &_items {
+      display: grid;
+      gap: 2rem;
+    }
+  }
+}

@@ -11,6 +11,13 @@
 @use './component/sectionTitle.scss';
 @use './component/iconZoom.scss';
 @use './component/scrollToTop.scss';
+@use './component/button.scss';
+@use './component/banner.scss';
+@use './component/checkbox.scss';
+@use './component/favorite.scss';
+@use './component/pageTitle.scss';
+@use './component/indent.scss';
+@use './component/infoCard.scss';
 
 /* ui */
 @use './ui/header.scss';
@@ -22,7 +29,30 @@
 @use './ui/cardFavoriteHistory.scss';
 @use './ui/cardSmall.scss';
 @use './ui/modal.scss';
+@use './ui/bannerList.scss';
+@use './ui/prefList.scss';
 
 /* page */
 @use './page/a1.scss';
 @use './page/a2.scss';
+@use './page/a3.scss';
+@use './page/b1.scss';
+@use './page/b2.scss';
+@use './page/b3.scss';
+@use './page/b4.scss';
+@use './page/b5.scss';
+@use './page/b6.scss';
+@use './page/c1.scss';
+@use './page/c3.scss';
+@use './page/c4.scss';
+@use './page/c5.scss';
+@use './page/c6.scss';
+@use './page/c7.scss';
+@use './page/d1.scss';
+@use './page/d3.scss';
+@use './page/d_other.scss';
+
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

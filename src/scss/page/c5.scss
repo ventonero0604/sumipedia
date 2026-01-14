@@ -1,0 +1,40 @@
+.C5 {
+  padding: 3rem 1rem 6rem;
+
+  &_text {
+    font-size: 1.4rem;
+    margin-block: 2rem;
+  }
+
+  &_form {
+    display: grid;
+    gap: 1.5rem;
+
+    &_item {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    &_input,
+    &_textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #b4c9d4 !important;
+      border-radius: 0.4rem;
+      font-size: 1.4rem;
+
+      &::placeholder {
+        color: #aaa;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--green);
+      }
+    }
+
+    &_textarea {
+      resize: vertical;
+    }
+  }
+}

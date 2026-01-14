@@ -1,0 +1,57 @@
+{{> head}}
+
+<body>
+  {{> header}}
+
+  <main class="C1">
+    <div class="C1_header">
+      <h2 class="SectionTitle">
+        お気に入り物件を比較
+      </h2>
+      <div class="C1_header_wrapper">
+        <div class="C1_header_num">
+          <img src="/img/ico-home.svg" alt="">
+          <p>
+            <span class="num">4</span>件
+          </p>
+        </div>
+        <select name="order">
+          <option value="1">コスパが高い順</option>
+          <option value="2">家賃が安い順（賃料+管理費）</option>
+          <option value="3">家賃が高い順（賃料+管理費）</option>
+          <option value="4">築年数が浅い順</option>
+          <option value="5">部屋が広い順</option>
+          <option value="6">新着順</option>
+          <option value="7">駅に近い順</option>
+          <option value="0" selected="">お気に入り登録順</option>
+        </select>
+        <a href="#" class="button is-disabled js-contact-button">まとめてお問い合わせ(無料)</a>
+      </div>
+    </div>
+
+    <section class="C1_content">
+      <div class="C1_content_texts">
+        <p>
+          選択中の都道府県の物件はまとめてお問い合わせできます
+        </p>
+        <small>
+          お気に入り登録したデータは90日間保存されます<br>
+          ※掲載終了となった物件は自動的に削除されます
+        </small>
+      </div>
+
+      <div class="C1_content_items">
+        {{> card_favorite_history}}
+        {{> card_favorite_history}}
+      </div>
+    </section>
+
+
+
+  </main>
+
+  {{> footer}}
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

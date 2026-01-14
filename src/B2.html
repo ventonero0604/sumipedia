@@ -1,0 +1,1605 @@
+{{> head}}
+
+<body>
+  {{> header}}
+
+  <main class="B2">
+    <a class="Banner" href="#">
+      <img src="/img/bnr-cashback.png" alt="50,000円現金キャッシュバック">
+    </a>
+    <div class="B2_content">
+      <section class="B2_top">
+        <div class="B2_top_header">
+          <p class="B2_top_header_pref">
+            都道府県 > 埼玉県
+          </p>
+          <button class="Button-green Button-change js-modal-open" type="button">都道府県を変更</button>
+        </div>
+        <div class="B2_top_cards">
+          <a href="#" class="B2_top_card">
+            <div class="B2_top_card_content">
+              <figure class="B2_top_card_content_image">
+                <img src="/img/ico-train-2.svg" alt="">
+              </figure>
+              沿線・駅から探す
+            </div>
+          </a>
+          <a href="#" class="B2_top_card">
+            <div class="B2_top_card_content">
+              <figure class="B2_top_card_content_image">
+                <img src="/img/ico-pin.svg" alt="">
+              </figure>
+              市区郡から探す
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="B2_section">
+        <h2 class="SectionTitle">
+          人気駅ランキング
+        </h2>
+        <ul class="B2_ranking">
+          <li class="B2_ranking_item B2_ranking_item-top1">
+            <a href="#">中野</a>
+          </li>
+          <li class="B2_ranking_item B2_ranking_item-top2">
+            <a href="#">荻窪</a>
+          </li>
+          <li class="B2_ranking_item B2_ranking_item-top3">
+            <a href="#">吉祥寺</a>
+          </li>
+        </ul>
+        <div class="B2_ranking-expand js-expand">
+          <div>
+            <ul class="B2_ranking">
+              <li class="B2_ranking_item">
+                <a href="#">中野</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">荻窪</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="Button-green Button-more js-more" type="button">
+          <img src="/img/ico-more.svg" alt="">
+        </button>
+        <small>
+          ※データ参照元：SUUMO（2024年11月01日時点）
+        </small>
+      </section>
+
+      <section class="B2_section">
+        <h2 class="SectionTitle">
+          人気市区郡ランキング
+        </h2>
+        <ul class="B2_ranking">
+          <li class="B2_ranking_item B2_ranking_item-top1">
+            <a href="#">中野</a>
+          </li>
+          <li class="B2_ranking_item B2_ranking_item-top2">
+            <a href="#">荻窪</a>
+          </li>
+          <li class="B2_ranking_item B2_ranking_item-top3">
+            <a href="#">吉祥寺</a>
+          </li>
+        </ul>
+        <div class="B2_ranking-expand js-expand">
+          <div>
+            <ul class="B2_ranking">
+              <li class="B2_ranking_item">
+                <a href="#">中野</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">荻窪</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+              <li class="B2_ranking_item">
+                <a href="#">吉祥寺</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="Button-green Button-more js-more" type="button">
+          <img src="/img/ico-more.svg" alt="">
+        </button>
+        <small>
+          ※データ参照元：SUUMO（2024年11月01日時点）
+        </small>
+      </section>
+
+      <section class="B2_section">
+        <h2 class="SectionTitle">
+          人気の詳細条件から探す
+        </h2>
+        {{> bannerList}}
+      </section>
+
+      <section class="B2_section">
+        <h2 class="SectionTitle">
+          おすすめ物件一覧を見る
+        </h2>
+        <ul class="BannerList">
+          <li class="BannerList_item">
+            <a href="#">
+              <img src="/img/bnr-card-couple.png" alt="カップル向けおすすめ物件一覧">
+            </a>
+          </li>
+          <li class="BannerList_item">
+            <a href="#">
+              <img src="/img/bnr-card-near.png" alt="駅チカおすすめ物件一覧">
+            </a>
+          </li>
+          <li class="BannerList_item">
+            <a href="#">
+              <img src="/img/bnr-card-alone.png" alt="一人暮らし向けおすすめ物件一覧">
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="B2_section">
+        <h2 class="SectionTitle">
+          東京都家賃相場情報
+        </h2>
+        <div class="B2_tabs">
+          <ul class="B2_tabs_tab">
+            <li class="B2_tabs_item">
+              <button type="button" class="B2_tabs_item_button js-tab-switch is-active" data-tab-switch="tab1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="19" viewBox="0 0 25 19" fill="none">
+                  <mask id="mask0_15_2289" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                    height="19">
+                    <path d="M24.567 0H0V18.488H24.567V0Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_15_2289)">
+                    <path d="M22.3528 6.37988V18.1739H2.21582V6.37988" stroke="currentColor" stroke-width="0.8"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M12.2834 0.316406L0.31543 5.32341V6.96641L12.2834 1.95441L24.2524 6.96641V5.32341L12.2834 0.316406Z"
+                      stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.79199 18.0594V11.0654H10.185V18.0594" stroke="currentColor" stroke-width="0.8"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <path d="M16.6027 11.1787H13.1777V14.0667H16.6027V11.1787Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M20.0285 11.1787H16.6035V14.0667H20.0285V11.1787Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>
+                  マンション
+                </span>
+              </button>
+            </li>
+            <li class="B2_tabs_item">
+              <button type="button" class="B2_tabs_item_button js-tab-switch" data-tab-switch="tab2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="21" viewBox="0 0 30 21" fill="none">
+                  <mask id="mask0_15_2321" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="30"
+                    height="21">
+                    <path d="M28.7715 0.5V19.7129H0.5V0.5H28.7715Z" fill="white" stroke="white" />
+                  </mask>
+                  <g mask="url(#mask0_15_2321)">
+                    <path d="M27.9227 5.94824V19.8972H1.34766V5.94824" stroke="currentColor" stroke-width="0.8"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <path d="M6.91909 14.5322H4.74609V17.0632H6.91909V14.5322Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M9.09195 14.5322H6.91895V17.0632H9.09195V14.5322Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.3517 14.5322H20.1787V17.0632H22.3517V14.5322Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M24.5246 14.5322H22.3516V17.0632H24.5246V14.5322Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M6.91909 6.65723H4.74609V9.18823H6.91909V6.65723Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M9.09195 6.65723H6.91895V9.18823H9.09195V6.65723Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.3517 6.65723H20.1787V9.18823H22.3517V6.65723Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M24.5246 6.65723H22.3516V9.18823H24.5246V6.65723Z" stroke="currentColor" stroke-width="0.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <mask id="mask1_15_2321" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="30"
+                    height="21">
+                    <path d="M28.7715 0.5V19.7129H0.5V0.5H28.7715Z" fill="white" stroke="white" />
+                  </mask>
+                  <g mask="url(#mask1_15_2321)">
+                    <path d="M12.5732 5.94824V19.8972" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M16.6982 5.94824V19.8972" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                  <path d="M8.99121 1.64355H20.2802" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <mask id="mask2_15_2321" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="30"
+                    height="21">
+                    <path d="M28.7715 0.5V19.7129H0.5V0.5H28.7715Z" fill="white" stroke="white" />
+                  </mask>
+                  <g mask="url(#mask2_15_2321)">
+                    <path
+                      d="M16.6984 5.80841L22.3524 2.13341L28.9524 6.42541V4.60841L22.3524 0.316406L16.3084 4.24541H12.9654L6.91943 0.316406L0.31543 4.60841V6.42541L6.91543 2.13341L12.5694 5.80841H16.6984Z"
+                      stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                </svg>
+                <span>
+                  アパート
+                </span>
+              </button>
+            </li>
+            <li class="B2_tabs_item">
+              <button type="button" class="B2_tabs_item_button js-tab-switch" data-tab-switch="tab3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+                  <path d="M14.9336 7.6543H23.3256" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M23.3256 9.74414H14.9336" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M23.3256 11.833H14.9336" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M23.3256 13.9229H14.9336" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M23.3256 16.0117H14.9336" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M23.3256 18.1016H14.9336" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <mask id="mask0_15_2299" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="26"
+                    height="25">
+                    <path d="M25.0195 0.5V24.4502H0.5V0.5H25.0195Z" fill="white" stroke="white" />
+                  </mask>
+                  <g mask="url(#mask0_15_2299)">
+                    <path d="M14.8357 24.6354H4.13574V12.8514L14.8357 9.10742V24.6354Z" stroke="currentColor"
+                      stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M13.0566 9.58439V5.02539H25.2046V24.6344H14.3176" stroke="currentColor" stroke-width="0.8"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4.70341 24.6354H0.316406V0.316406H10.3564V10.6294" stroke="currentColor"
+                      stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <path d="M2.19336 2.94434H8.47736" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M8.47736 5.03418H2.19336" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M8.47736 7.12305H2.19336" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M8.47736 9.21289H2.19336" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M6.3457 14.5879H12.6297" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M12.6297 16.6768H6.3457" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M12.6297 18.7666H6.3457" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M12.6297 20.8564H6.3457" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>
+                  一戸建・その他
+                </span>
+              </button>
+            </li>
+          </ul>
+
+          <div class="B2_tabs_wrapper">
+            <ul class="B2_tabs_label">
+              <li>
+                <button class="B2_tabs_label_button js-room-type is-active" data-room-select="1r">ワンルーム</button>
+              </li>
+              <li>
+                <button class="B2_tabs_label_button js-room-type" data-room-select="1k">1K/1DK</button>
+              </li>
+              <li>
+                <button class="B2_tabs_label_button js-room-type" data-room-select="1ldk">1LDK/2K/2DK</button>
+              </li>
+              <li>
+                <button class="B2_tabs_label_button js-room-type" data-room-select="2ldk">2LDK/3K/3DK</button>
+              </li>
+              <li>
+                <button class="B2_tabs_label_button js-room-type" data-room-select="3ldk">3LDK/4K～</button>
+              </li>
+            </ul>
+            <div class="B2_tabs_content js-tab-content is-show" data-tab-content="tab1">
+              <ul class="B2_tabs_detail is-show" data-room-type="1r">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">12.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">4.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.1</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">3.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="1k">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">13.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">10.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">4.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.6</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="1ldk">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.1</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">12.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">10.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.6</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="2ldk">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">13.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">14.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">10.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="3ldk">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">14.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">142.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">13.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">118.6</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="B2_tabs_content js-tab-content" data-tab-content="tab2">
+              <ul class="B2_tabs_detail is-show" data-room-type="1r">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">4.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">12.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">4.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.1</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">3.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="1k">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">13.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">10.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">4.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.6</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="1ldk">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.1</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">12.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">10.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.6</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="2ldk">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">13.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">14.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">10.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="3ldk">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">14.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">142.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">13.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">118.6</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="B2_tabs_content js-tab-content" data-tab-content="tab3">
+              <ul class="B2_tabs_detail is-show" data-room-type="1r">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">12.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">4.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.1</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">3.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="1k">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">13.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">10.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">4.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.6</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="1ldk">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">5.1</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">12.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">10.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.6</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="2ldk">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">13.2</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">14.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">6.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">10.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+              <ul class="B2_tabs_detail" data-room-type="3ldk">
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">14.5</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">142.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">9.7</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">8.3</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">11.4</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">7.8</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">13.9</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+                <li class="B2_tabs_detail_item">
+                  <a href="#" class="B2_tabs_detail_link">さいたま市西区</a>
+                  <div class="B2_tabs_detail_info js-info">
+                    <p class="B2_tabs_detail_price">
+                      <span class="B2_tabs_detail_price_number js-price">118.6</span>万円
+                    </p>
+                    <span class="B2_tabs_detail_bar js-bar"></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <button class="Button-green Button-all" type="button">
+              <img src="/img/ico-more.svg" alt="">
+              東京都のエリア別家賃相場をすべて見る
+            </button>
+            <small>
+              ※データ参照元：SUUMO（2024年11月01日時点）
+            </small>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <a class="Banner" href="#">
+      <img src="/img/bnr-cashback.png" alt="50,000円現金キャッシュバック">
+    </a>
+
+    <section class="B2_section">
+      <h2 class="SectionTitle B2_trend_header">
+        昨日よく見られた物件
+      </h2>
+      <div class="B2_trend">
+        <ul class="B2_trend_detail B2_trend_detail-title">
+          <li>
+            賃料
+          </li>
+          <li>
+            敷/礼
+          </li>
+          <li>
+            広さ
+          </li>
+          <li>
+            間取り
+          </li>
+          <li>
+            交通
+          </li>
+          <li>
+            階数
+          </li>
+          <li>
+            住所
+          </li>
+        </ul>
+        <div class="B2_trend_items">
+          <article class="B2_trend_item">
+            <h3 class="B2_trend_item_header">
+              <span>レジデンス新保原</span>
+              <button class="Favorite js-favorite" type="button"></button>
+            </h3>
+            <figure class="B2_trend_item_image">
+              <img src="/img/dummy/img1.png" alt="">
+            </figure>
+            <ul class="B2_trend_detail">
+              <li>
+                8.5万円
+              </li>
+              <li>
+                5000円/4.3万円
+              </li>
+              <li>
+                63.6m2
+              </li>
+              <li>
+                3K
+              </li>
+              <li>
+                JR京浜東北線/蕨駅徒歩1分JR京浜東北線/蕨駅徒歩1分
+              </li>
+              <li>
+                3階/10階建
+              </li>
+              <li>
+                埼玉県蕨市塚越1
+              </li>
+            </ul>
+          </article>
+          <article class="B2_trend_item">
+            <h3 class="B2_trend_item_header">
+              <span>レジデンス新保原レジデンス新保原レジデンス新保原レジデンス新保原</span>
+              <button class="Favorite js-favorite" type="button"></button>
+            </h3>
+            <figure class="B2_trend_item_image">
+              <img src="/img/dummy/img1.png" alt="">
+            </figure>
+            <ul class="B2_trend_detail">
+              <li>
+                賃料
+              </li>
+              <li>
+                敷/礼
+              </li>
+              <li>
+                広さ
+              </li>
+              <li>
+                間取り
+              </li>
+              <li>
+                交通
+              </li>
+              <li>
+                階数
+              </li>
+              <li>
+                住所
+              </li>
+            </ul>
+          </article>
+          <article class="B2_trend_item">
+            <h3 class="B2_trend_item_header">
+              <span>レジデンス新保原 </span>
+              <button class="Favorite js-favorite" type="button"></button>
+            </h3>
+            <figure class="B2_trend_item_image">
+              <img src="/img/dummy/img1.png" alt="">
+            </figure>
+            <ul class="B2_trend_detail">
+              <li>
+                賃料
+              </li>
+              <li>
+                敷/礼
+              </li>
+              <li>
+                広さ
+              </li>
+              <li>
+                間取り
+              </li>
+              <li>
+                交通
+              </li>
+              <li>
+                階数
+              </li>
+              <li>
+                住所
+              </li>
+            </ul>
+          </article>
+          <article class="B2_trend_item">
+            <h3 class="B2_trend_item_header">
+              <span>レジデンス新保原</span>
+              <button class="Favorite js-favorite" type="button"></button>
+            </h3>
+            <figure class="B2_trend_item_image">
+              <img src="/img/dummy/img1.png" alt="">
+            </figure>
+            <ul class="B2_trend_detail">
+              <li>
+                賃料
+              </li>
+              <li>
+                敷/礼
+              </li>
+              <li>
+                広さ
+              </li>
+              <li>
+                間取り
+              </li>
+              <li>
+                交通
+              </li>
+              <li>
+                階数
+              </li>
+              <li>
+                住所
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="Modal" class="Modal">
+    <button class=" Modal_close js-modal-close"></button>
+    <div class="Modal_content">
+      <h3 class="Modal_title">
+        都道府県を選択
+      </h3>
+      {{> prefList}}
+    </div>
+  </div>
+
+  {{> footer}}
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

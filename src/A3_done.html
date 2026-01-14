@@ -1,0 +1,42 @@
+{{> head}}
+
+<body>
+  {{> header_contact}}
+
+  <main class="A3">
+    <section class="A3_done">
+      <div class="A3_done_content">
+        <figure class="A3_done_steps">
+          <img src="/img/img-contact-steps.svg" alt="">
+        </figure>
+        <p class="A3_done_title">
+          お問い合わせが完了しました
+        </p>
+        <p class="A3_done_email">
+          betterbear@gmail.com
+        </p>
+        <p class="A3_done_text">
+          上記のメールアドレスにメールをお送りしました。<br>
+          しばらく経ってもメールが届かない場合は<br>
+          再度お問い合わせください
+        </p>
+        <a href="#" class="Button Button-action">物件一覧に戻る</a>
+      </div>
+    </section>
+
+    <section class="A3_done_recommend">
+      <h3 class="A3_complete_title">
+        あなたへのおすすめ物件
+      </h3>
+      <div class="A3_done_recommend_items">
+        {{> card_recommend_small}}
+        {{> card_recommend_small}}
+      </div>
+    </section>
+  </main>
+
+  {{> footer_min}}
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

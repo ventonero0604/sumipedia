@@ -1,7 +1,10 @@
 .CardSmall {
+  border-radius: 0.3rem;
+  background: #fff;
+  overflow: hidden;
+
   .main {
     display: flex;
-    border-top: 1px solid #c6c6c6;
     border-bottom: 1px solid #c6c6c6;
     background: #f9f9f9;
     align-items: center;

@@ -1,0 +1,172 @@
+.B5 {
+  &_header {
+    padding: 2rem 1rem 1rem;
+    display: grid;
+    gap: 1rem;
+
+    .small {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+  }
+
+  &_title {
+    display: flex;
+    gap: 0.2rem;
+
+    span {
+      height: 2.4rem;
+      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #e1e8e9;
+      font-size: 1.1rem;
+      padding: 0 1rem;
+      font-weight: 600;
+
+      &:nth-child(1) {
+        flex: 1;
+      }
+
+      &:nth-child(2) {
+        width: 7.7rem;
+        text-align: center;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &_expand {
+    &_item {
+      border-bottom: 1px solid #e3e8ea;
+
+      svg {
+        width: 2rem;
+        fill: currentColor;
+        color: inherit;
+        fill: var(--green);
+        transition: all 0.3s;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &.is-expand {
+        svg {
+          transform: translateY(-50%) rotate(-180deg);
+          fill: #b9b9b9;
+          transition: all 0.3s;
+        }
+      }
+
+      & > label {
+        border-bottom: 1px solid #e3e8ea;
+        padding: 1.5rem 1rem;
+      }
+    }
+  }
+
+  &_list {
+    display: none;
+
+    &.is-show {
+      display: grid;
+    }
+
+    &_item {
+      padding-left: 3rem;
+
+      & + & {
+        .B5_list_label {
+          border-top: 1px solid #e3e8ea;
+        }
+      }
+
+      &.is-selected {
+        background: #f9f9f9;
+      }
+    }
+
+    &_label {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 1.5rem 0;
+
+      .Checkbox {
+        width: 2.4rem;
+        height: 2.4rem;
+        &:checked {
+          background-size: 1.5rem;
+        }
+      }
+
+      .text {
+        font-size: 1.3rem;
+        margin-left: 0.6rem;
+      }
+
+      .count {
+        font-size: 1rem;
+        color: #6a6a6a;
+        margin-left: 0.4rem;
+      }
+
+      .avg-rent {
+        position: absolute;
+        font-size: 1.3rem;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: grid;
+        line-height: 1.2;
+
+        &.is-highest {
+          font-weight: bold;
+          &:after {
+            content: '最も高い';
+            font-size: 1rem;
+            text-align: right;
+          }
+        }
+
+        &.is-lowest {
+          font-weight: bold;
+          &:after {
+            content: '最も安い';
+            font-size: 1rem;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  &_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    height: 6rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+
+    .Button-action {
+      color: white;
+      font-weight: bold;
+      display: grid;
+      place-items: center;
+      border-radius: 0.4rem;
+      width: 16rem;
+      height: 4rem;
+      font-size: 1.6rem;
+      margin: unset;
+    }
+  }
+}

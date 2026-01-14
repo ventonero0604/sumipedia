@@ -1,0 +1,25 @@
+.C3 {
+  padding: 3rem 1rem;
+
+  &_table {
+    font-size: 1.1rem;
+    text-align: left;
+    width: 100%;
+    margin-top: 2rem;
+
+    th,
+    td {
+      padding: 1rem;
+      border: 1px solid #cccccc;
+      background: #f5f6f7;
+      font-weight: normal;
+    }
+
+    tr:nth-child(even) {
+      th,
+      td {
+        background: #e0e0e0;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.C7 {
+  padding: 3rem 1rem;
+
+  &_content {
+    margin-top: 2rem;
+  }
+
+  &_section {
+    & + & {
+      margin-top: 4rem;
+    }
+  }
+
+  &_title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #f5f5f5;
+
+    span {
+      display: block;
+      padding-left: 1rem;
+      line-height: 1.2;
+      border-left: 4px solid var(--green);
+    }
+  }
+
+  &_table_wrapper {
+    overflow-x: auto;
+  }
+
+  &_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+
+    th,
+    td {
+      padding: 1rem;
+      border: 1px solid #eee;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    th {
+      background: #f5f6f7;
+      font-weight: bold;
+      width: 30%;
+      text-align: left;
+    }
+
+    td {
+      background: #f5f6f7;
+    }
+
+    tr:nth-child(even) {
+      th,
+      td {
+        background: #fff;
+      }
+
+      th {
+        background: #fff;
+      }
+    }
+  }
+
+  &_accordion {
+    margin-bottom: 1rem;
+
+    &_checkbox {
+      display: none;
+    }
+
+    &_label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      font-weight: bold;
+
+      &::before {
+        content: '+';
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #c8c8c8;
+      }
+    }
+
+    &_checkbox:checked + &_label::before {
+      content: '-';
+    }
+
+    &_content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    &_checkbox:checked ~ &_content {
+      max-height: 500rem;
+    }
+  }
+}

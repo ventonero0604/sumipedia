@@ -1,0 +1,11 @@
+.BannerList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+
+  &_item {
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -115,8 +115,9 @@
       gap: 1rem;
 
       li {
+        width: 50%;
         img {
-          height: 4.6rem;
+          width: 100%;
         }
       }
     }
@@ -331,6 +332,26 @@
 
     tr:nth-child(odd) td {
       background: #fafbfc;
+    }
+  }
+
+  &_end {
+    &_content {
+      padding: 2rem;
+      text-align: center;
+      display: grid;
+      gap: 2rem;
+
+      .lead {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 1.5;
+      }
+    }
+
+    &_banner_list {
+      background: #eef4f7;
+      padding: 3rem 1rem;
     }
   }
 }

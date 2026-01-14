@@ -1,0 +1,116 @@
+.Button {
+  &-action {
+    background: #fe8b00;
+    width: 26rem;
+    height: 4rem;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-radius: 0.4rem;
+    margin-inline: auto;
+    color: white;
+  }
+
+  &-green {
+    background: #375b6d;
+    color: white;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    border-radius: 100vh;
+  }
+
+  &-change {
+    font-size: 1rem;
+    width: 8.4rem;
+    height: 2rem;
+  }
+
+  &-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 18rem;
+    height: 3.4rem;
+    font-size: 1.2rem;
+    margin-inline: auto;
+
+    &:after {
+      content: 'もっと見る';
+    }
+
+    img {
+      width: 1.5rem;
+    }
+
+    &.is-open {
+      img {
+        display: none;
+      }
+      &:after {
+        content: '閉じる';
+      }
+    }
+  }
+
+  &-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 27.7rem;
+    height: 3.4rem;
+    font-size: 1.2rem;
+    margin-inline: auto;
+    margin-top: 1rem;
+
+    img {
+      width: 1.5rem;
+    }
+  }
+
+  &-add-condition {
+    background: var(--green);
+    color: white;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    border-radius: 0.4rem;
+    width: 16rem;
+    height: 4rem;
+    font-size: 1.6rem;
+  }
+
+  &-all-condition {
+    background: var(--green);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+    width: 26rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    gap: 1rem;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 1.8rem;
+      height: 1.8rem;
+      background: center/cover no-repeat url('../../img/ico-plus.png');
+    }
+
+    &.is-expand {
+      &:before {
+        background: center/cover no-repeat url('../../img/ico-minus.png');
+      }
+    }
+  }
+}

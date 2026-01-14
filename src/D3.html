@@ -1,0 +1,250 @@
+{{> head}}
+
+<body>
+  {{> header_min}}
+
+  <main class="D3 is-apply">
+    <div class="InfoCard">
+      <p class="green font text-[1.6rem] font-bold text-center">
+        キャンペーン申請期間<br>
+        2025/10/29 ～ 5/10
+      </p>
+    </div>
+
+    <div class="D3_container">
+      <h2 class="D3_container_title D3_container_title_apply">必要書類をアップロードしてください</h2>
+      <div class="D3_container_title_confirm">
+        <h2 class="D3_container_title D3_container_title_confirm">入力内容をご確認ください</h2>
+        <p class="text-[1.4rem] text-center">
+          以下の内容で申請してよいかご確認のうえ、<br>
+          「申請する」ボタンをおしてください
+        </p>
+      </div>
+      <ul class="D3_list D3_list-border">
+        <li>
+          <div class="D3_list_header">
+            <h3 class="D3_list_header_title">
+              <span class="green">①</span>
+              お問い合わせしたお部屋の賃貸借契約書
+            </h3>
+            <p>以下の項目が全て確認できる必要があります。</p>
+          </div>
+          <div class="D3_list_content">
+            <p>・物件住所</p>
+            <p>・お部屋の階数</p>
+            <p>・月額賃料</p>
+            <p>・契約名義</p>
+            <p>・契約締結日</p>
+            <p>・契約した不動産会社名と店舗名</p>
+            <p class="ml-[1rem]"><span class="Indent">※1枚の画像で確認することが難しい場合は複数に分
+                けてください</span></p>
+            <p class="ml-[1rem]"><span class="Indent">※画像ファイルの最大サイズは10MBです</span></p>
+          </div>
+        </li>
+        <li>
+          <div class="apply flex items-center justify-between px-2 mt-4">
+            <label class="text-[1.4rem] font-bold" for="upload1">賃貸借契約書①（必須）</label>
+            <label for="upload1" class="D3_upload_btn">ファイルを選択</label>
+            <input type="file" id="upload1" accept="image/*" multiple class="D3_upload_input">
+          </div>
+          <div class="confirm px-2 py-2">
+            <div class="flex items-center gap-3">
+              <figure class="thumb">
+              </figure>
+              <div class="text-[1.3rem]">
+                <p class="file-info"></p>
+                <button type="button" class="green underline js-fix">修正する</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="apply flex items-center justify-between px-2 mt-4">
+            <label class="text-[1.4rem] font-bold" for="upload2">賃貸借契約書②（任意）</label>
+            <label for="upload2" class="D3_upload_btn">ファイルを選択</label>
+            <input type="file" id="upload2" accept="image/*" multiple class="D3_upload_input">
+          </div>
+          <div class="confirm px-2 py-2">
+            <div class="flex items-center gap-3">
+              <figure class="thumb">
+              </figure>
+              <div class="text-[1.3rem]">
+                <p class="file-info"></p>
+                <button type="button" class="green underline js-fix">修正する</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="apply flex items-center justify-between px-2 mt-4">
+            <label class="text-[1.4rem] font-bold" for="upload3">賃貸借契約書③（任意）</label>
+            <label for="upload3" class="D3_upload_btn">ファイルを選択</label>
+            <input type="file" id="upload3" accept="image/*" multiple class="D3_upload_input">
+          </div>
+          <div class="confirm px-2 py-2">
+            <div class="flex items-center gap-3">
+              <figure class="thumb">
+              </figure>
+              <div class="text-[1.3rem]">
+                <p class="file-info"></p>
+                <button type="button" class="green underline js-fix">修正する</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="D3_list D3_list-border">
+        <li>
+          <div class="D3_list_header">
+            <h3 class="D3_list_header_title">
+              <span class="green">②</span>
+              公共料金明細書・携帯電話請求書のいずれか１つ
+            </h3>
+            <p>以下の項目が全て確認できる必要があります。</p>
+          </div>
+          <div class="D3_list_content">
+            <p>・物件住所</p>
+            <p>・氏名</p>
+            <p>・請求月または発行月<small class="ml-1">申請期間当月もしくは前月の表記</small></p>
+            <p class="ml-[1rem]"><span class="Indent">※オンライン明細の場合は、ご成約された物件の住所が確認できるページキャプチャをご提出ください。</span></p>
+            <p class="ml-[1rem]"><span class="Indent">※こちらの書類で確認できる住所とお問い合わせされ た物件住所が異なる場合、対象外となりますのでご注意ください。</span></p>
+            <p class="ml-[1rem]"><span class="Indent">※画像ファイルの最大サイズは10MBです</span></p>
+          </div>
+        </li>
+        <li>
+          <div class="apply flex items-center justify-between px-2 mt-4">
+            <label class="text-[1.4rem] font-bold" for="upload4">書類①</label>
+            <label for="upload4" class="D3_upload_btn">ファイルを選択</label>
+            <input type="file" id="upload4" accept="image/*" multiple class="D3_upload_input">
+          </div>
+          <div class="confirm px-2 py-2">
+            <div class="flex items-center gap-3">
+              <figure class="thumb">
+              </figure>
+              <div class="text-[1.3rem]">
+                <p class="file-info"></p>
+                <button type="button" class="green underline js-fix">修正する</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="D3_list">
+        <li>
+          <div class="D3_list_header">
+            <h3 class="D3_list_header_title">
+              <span class="green">③</span>
+              本人確認書類
+            </h3>
+            <p>以下のいずれか１点の書類画像が必要です。</p>
+          </div>
+          <div class="D3_list_content">
+            <p>・運転免許証（表面のみ）</p>
+            <p>・運転経歴証明書（本人確認補助書類も必須）</p>
+            <p>・被保険者証（国民健康保険／健康保険）</p>
+            <p>・個人番号カード（表面のみ）</p>
+            <p>・住民基本台帳カード（顔写真があるもの）</p>
+            <p>・日本国パスポート（現住所の確認ができるもののみ）</p>
+            <p>・特別永住者証明書</p>
+            <p>・在留カードまたは外国人登録証明書</p>
+            <p>・身体障がい者手帳</p>
+            <p>・精神障がい者保健福祉手帳</p>
+            <p>・療育手帳（本人確認補助書類も必須）</p>
+            <p class="Indent">・外務省の発行する身分証明票（補助書類として住居証明書も必須）</p>
+            <p class="ml-[1rem]"><span class="Indent">※本人確認書類のお名前と契約名義が異なる場合、　対象外となりますのでご注意ください。</span></p>
+            <p class="ml-[1rem]"><span class="Indent">※画像ファイルの最大サイズは10MBです</span></p>
+          </div>
+        </li>
+        <li>
+          <div class="apply flex items-center justify-between px-2 mt-4">
+            <label class="text-[1.4rem] font-bold" for="upload5">書類①</label>
+            <label for="upload5" class="D3_upload_btn">ファイルを選択</label>
+            <input type="file" id="upload5" accept="image/*" multiple class="D3_upload_input">
+          </div>
+          <div class="confirm px-2 py-2">
+            <div class="flex items-center gap-3">
+              <figure class="thumb">
+              </figure>
+              <div class="text-[1.3rem]">
+                <p class="file-info"></p>
+                <button type="button" class="green underline js-fix">修正する</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="D3_container">
+      <h3 class="D3_list_header_title_border">
+        キャッシュバック振込口座
+      </h3>
+      <p class="font-bold mt-3">
+        以下の項目をご入力ください。
+      </p>
+      <p class="text-[1.1rem]">
+        ※キャッシュバックの振込を希望される口座をご入力ください
+      </p>
+      <form class="D3_form">
+        <div class="D3_form_group">
+          <label class="D3_form_label" for="bankName">銀行名</label>
+          <select class="D3_form_select" id="bankName" required>
+            <option value="" disabled selected>銀行を選択してください</option>
+            <option value="みずほ銀行">みずほ銀行</option>
+            <option value="三菱UFJ銀行">三菱UFJ銀行</option>
+            <option value="三井住友銀行">三井住友銀行</option>
+            <option value="りそな銀行">りそな銀行</option>
+            <option value="ゆうちょ銀行">ゆうちょ銀行</option>
+          </select>
+        </div>
+
+        <div class="D3_form_group">
+          <label class="D3_form_label" for="branchName">支店名</label>
+          <select class="D3_form_select" id="branchName" required>
+            <option value="" disabled selected>支店を選択してください</option>
+            <option value="東京支店">東京支店</option>
+            <option value="新宿支店">新宿支店</option>
+            <option value="渋谷支店">渋谷支店</option>
+            <option value="池袋支店">池袋支店</option>
+            <option value="横浜支店">横浜支店</option>
+          </select>
+        </div>
+
+        <div class="D3_form_group">
+          <div class="D3_form_radio">
+            <label>
+              <input type="radio" name="accountType" value="普通"> 普通預金
+            </label>
+            <label>
+              <input type="radio" name="accountType" value="当座"> 当座預金
+            </label>
+          </div>
+        </div>
+
+        <div class="D3_form_group">
+          <label class="D3_form_label" for="accountHolder">口座名義（カナ）</label>
+          <input class="D3_form_input" type="text" id="accountHolder" placeholder="">
+        </div>
+
+        <div class="D3_form_group">
+          <label class="D3_form_label" for="accountNumber">口座番号</label>
+          <input class="D3_form_input" type="text" id="accountNumber" placeholder="">
+        </div>
+
+        <button type="button" class="hidden ml-auto green underline js-bank-fix">修正する</button>
+      </form>
+    </div>
+
+    <button class="Button-action js-submit" type="button">
+      申請する
+    </button>
+
+  </main>
+
+
+
+  {{> footer}}
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

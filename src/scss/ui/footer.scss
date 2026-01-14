@@ -9,6 +9,11 @@
     display: grid;
     gap: 1.2rem;
     padding: 0 1rem;
+
+    &.between {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   .logo {

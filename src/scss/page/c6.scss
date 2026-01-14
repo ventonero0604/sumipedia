@@ -1,0 +1,22 @@
+.C6 {
+  padding: 3rem 1rem;
+
+  &_texts {
+    margin-top: 2rem;
+  }
+
+  &_text {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+
+  &_list {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+
+    li {
+      padding-left: 2.5rem;
+      text-indent: -2.5rem;
+    }
+  }
+}

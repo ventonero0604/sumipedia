@@ -1,0 +1,29 @@
+{{> head}}
+
+<body>
+  {{> header_min}}
+
+  <main class="C5">
+    <h2 class="PageTitle">
+      お問い合わせ
+    </h2>
+
+    <p class="C5_text">
+      キャッシュバック関連を含む<br>
+      お問い合わせはこちらからお願いします。
+    </p>
+
+    <form class="C5_form" action="">
+      <input class="C5_form_input" type="text" id="name" name="name" placeholder="お名前" required>
+      <input class="C5_form_input" type="email" id="email" name="email" placeholder="メールアドレス" required>
+      <textarea class="C5_form_textarea" id="message" name="message" rows="3" placeholder="お問い合わせ内容"
+        required></textarea>
+      <button class="Button-action mt-5" type="submit">送信する</button>
+    </form>
+  </main>
+
+  {{> footer}}
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

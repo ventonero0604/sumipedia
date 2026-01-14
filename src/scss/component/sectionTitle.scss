@@ -2,6 +2,7 @@
   font-size: 1.3rem;
   display: flex;
   gap: 0.6rem;
+  font-weight: bold;
 
   &:before {
     content: '';
@@ -10,5 +11,15 @@
     height: 2rem;
     background: var(--green);
     border-radius: 0.2rem;
+  }
+
+  &-fill {
+    background: var(--green);
+    height: 3.4rem;
+    display: grid;
+    place-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
   }
 }

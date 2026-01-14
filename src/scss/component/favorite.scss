@@ -1,0 +1,6 @@
+.Favorite {
+  background: center/contain no-repeat url(../../img/ico-heart.svg);
+  &.-filled {
+    background-image: url(../../img/ico-heart-fill.svg);
+  }
+}

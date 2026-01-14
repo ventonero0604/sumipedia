@@ -1,0 +1,64 @@
+.PrefList {
+  &_item {
+    font-size: 1.3rem;
+    line-height: 1;
+
+    button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1.3rem;
+      border-top: 1px solid #e3e8ea;
+      border-bottom: 1px solid #e3e8ea;
+
+      svg {
+        width: 2rem;
+        fill: currentColor;
+        color: inherit;
+        fill: var(--green);
+        transition: all 0.3s;
+      }
+
+      &.is-open {
+        svg {
+          transform: rotate(-180deg);
+          fill: #b9b9b9;
+          transition: all 0.3s;
+        }
+      }
+    }
+
+    & + & {
+      margin-top: -1px;
+    }
+  }
+
+  &_details {
+    display: none;
+  }
+
+  &_detail {
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 3rem;
+      padding: 1.3rem 1.8rem 1.3rem 0;
+
+      &:after {
+        display: block;
+        content: '';
+        width: 0.6rem;
+        height: 1.2rem;
+        background: center/cover no-repeat url('../..//img/ico-arrow-right-green.svg');
+      }
+    }
+
+    & + & {
+      a {
+        border-top: 1px solid #e3e8ea;
+      }
+    }
+  }
+}

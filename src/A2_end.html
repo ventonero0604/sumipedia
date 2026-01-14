@@ -1,0 +1,37 @@
+{{> head}}
+
+<body>
+  {{> header}}
+
+  <main class="A2">
+    <section class="A2_end">
+      <a class="Banner" href="#">
+        <img src="/img/bnr-cashback.png" alt="50,000円現金キャッシュバック">
+      </a>
+      <div class="A2_end_content">
+        <p class="lead">
+          お探しの物件は<br>
+          掲載終了してしまいました。<br>
+          大変申し訳ございません。
+        </p>
+        <p class="text">
+          住みペディアTOPに戻るか、<br>
+          以下のボタンから<br>
+          理想のお部屋をお探しください。
+        </p>
+        <a href="#" class="Button Button-action">
+          住みペディアTOPに戻る
+        </a>
+      </div>
+    </section>
+
+    <section class="A2_end_banner_list">
+      {{> bannerList}}
+    </section>
+  </main>
+
+  {{> footer}}
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

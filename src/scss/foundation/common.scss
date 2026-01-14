@@ -2,9 +2,14 @@
 @use './pxvw.scss' as *;
 
 html {
-  scroll-behavior: smooth;
   font-size: 62.5%;
   font-size: vwsp(10);
+
+  @include pc {
+    // font-size: vwpc(10);
+    // max-width: 50%;
+    // margin: 0 auto;
+  }
 }
 
 body {
