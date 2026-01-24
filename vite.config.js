@@ -34,7 +34,7 @@ const getHtmlInputs = () => {
 export default defineConfig({
   base: './',
   server: {
-    host: '127.0.0.1' //IPアドレスを有効化
+    host: true
   },
   root: root, //開発ディレクトリ設定
   build: {

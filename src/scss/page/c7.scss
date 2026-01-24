@@ -1,8 +1,8 @@
 .C7 {
-  padding: 3rem 1rem;
+  padding: 4.5rem 1rem;
 
   &_content {
-    margin-top: 2rem;
+    margin-top: 2.4rem;
   }
 
   &_section {
@@ -15,7 +15,7 @@
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 2rem 1rem;
     background: #f5f5f5;
 
     span {
@@ -39,15 +39,16 @@
     td {
       padding: 1rem;
       border: 1px solid #eee;
-      vertical-align: top;
+      vertical-align: middle;
       line-height: 1.6;
     }
 
     th {
       background: #f5f6f7;
       font-weight: bold;
-      width: 30%;
+      width: 5.8rem;
       text-align: left;
+      padding: 1rem 0.5rem;
     }
 
     td {

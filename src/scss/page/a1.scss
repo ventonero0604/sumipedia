@@ -2,14 +2,18 @@
   &_header {
     position: relative;
     box-shadow: 0 0.3rem 0 0 rgba(0, 0, 0, 0.16);
-    padding: 1rem 1.4rem 0 1.4rem;
-    gap: 1.2rem;
     display: grid;
+
+    .SectionTitle {
+      border-bottom: 1px solid #e3e8ea;
+      padding: 1.2rem 1.4rem;
+    }
 
     .selected {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding-bottom: 1rem;
+      padding: 0 1.4rem 0 1.4rem;
+      height: 4.3rem;
 
       li {
         display: flex;
@@ -148,12 +152,14 @@
 
     .text {
       color: white;
+      display: flex;
+      align-items: center;
 
       span {
         color: #ff8c03;
         font-weight: 700;
         font-size: 2.2rem;
-        padding: 0 0.3rem;
+        padding: 0 0.3rem 0.4rem;
       }
     }
 

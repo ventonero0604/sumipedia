@@ -20,8 +20,8 @@
     position: relative;
 
     &:after {
-      width: 0.8rem;
-      height: 1.8rem;
+      width: 1.2rem;
+      height: 1.9rem;
       display: block;
       content: '';
       background: center/contain no-repeat url(../../img/ico-arrow.svg);
@@ -34,6 +34,7 @@
     .container {
       display: grid;
       gap: 0.5rem;
+      max-width: 10rem;
     }
 
     .label {
@@ -51,7 +52,7 @@
     .image {
       flex-shrink: 0;
       width: 10rem;
-      height: 10rem;
+      height: 9.5rem;
       img {
         height: 100%;
         width: 100%;
@@ -64,6 +65,13 @@
       font-size: 1rem;
       line-height: 1.5;
     }
+
+    .initialCosts {
+      margin: 0.2rem 0;
+      li {
+        font-size: 1.2rem;
+      }
+    }
   }
 
   .actions {
@@ -72,10 +80,17 @@
     gap: 1.5rem;
     width: 100%;
     padding: 1.2rem 2rem 1.2rem 1rem;
+
+    .Cta {
+      .text {
+        font-size: 1.4rem;
+      }
+    }
   }
 
   .Favorite {
-    width: 2.5rem;
+    width: 2.6rem;
     height: 2.2rem;
+    flex-shrink: 0;
   }
 }

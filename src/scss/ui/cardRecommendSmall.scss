@@ -19,9 +19,10 @@
     padding: 1.2rem 1rem;
     position: relative;
 
-    &:after .container {
+    .container {
       display: grid;
       gap: 0.5rem;
+      max-width: 10rem;
     }
 
     .label {

@@ -1,6 +1,6 @@
 .B4 {
   &_header {
-    padding: 2rem 1rem 1rem;
+    padding: 1.2rem 1rem 1rem;
     display: grid;
     gap: 1rem;
 
@@ -41,7 +41,7 @@
     display: grid;
 
     &_item {
-      padding-left: 2rem;
+      padding-left: 3rem;
 
       & + & {
         .B4_list_label {
@@ -82,11 +82,12 @@
       .avg-rent {
         position: absolute;
         font-size: 1.3rem;
-        right: 1rem;
+        right: 1.5rem;
         top: 50%;
         transform: translateY(-50%);
         display: grid;
         line-height: 1.2;
+        text-align: right;
 
         &.is-highest {
           font-weight: bold;

@@ -72,6 +72,7 @@
   &_ranking {
     display: grid;
     gap: 1.2rem;
+    padding-bottom: 0.4rem;
 
     &-expand {
       display: grid;
@@ -90,7 +91,7 @@
     &_item {
       background: white;
       border-radius: 1rem;
-      box-shadow: 0 2px 2px 0 rgba(185, 202, 209, 0.6);
+      box-shadow: 0 0.2rem 0.2rem 0 rgba(185, 202, 209, 0.6);
       counter-increment: ranking;
 
       a {
@@ -114,6 +115,18 @@
           font-weight: bold;
           color: white;
           font-size: 1.7rem;
+        }
+
+        &:after {
+          width: 0.7rem;
+          height: 1.2rem;
+          display: block;
+          content: '';
+          background: center/contain no-repeat url(../../img/ico-arrow.svg);
+          position: absolute;
+          right: 1.5rem;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
 
@@ -142,12 +155,21 @@
   }
 
   &_tabs {
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+
+    .SectionTitle {
+      padding: 0 1.3rem;
+    }
+
     &_tab {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0.2rem;
       border-radius: 1rem 1rem 0 0;
       overflow: hidden;
+      margin: 0 1.3rem;
     }
 
     &_item {
@@ -185,8 +207,8 @@
     }
 
     &_wrapper {
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
+      // width: 100vw;
+      // margin-left: calc(50% - 50vw);
       background: #dce7ec;
       display: grid;
       gap: 1rem;
@@ -241,7 +263,7 @@
 
       &_item {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         gap: 1rem;
       }
 
@@ -322,6 +344,10 @@
         padding: 0 1rem;
         max-width: 14.4rem;
 
+        &.small {
+          font-size: 0.9rem;
+        }
+
         &:nth-child(even) {
           background: white;
         }
@@ -378,11 +404,12 @@
           white-space: nowrap;
           min-width: 0;
           flex: 1;
+          font-weight: bold;
         }
 
         .Favorite {
-          width: 1.6rem;
-          height: 1.3rem;
+          width: 1.7rem;
+          height: 1.4rem;
           flex-shrink: 0;
         }
       }

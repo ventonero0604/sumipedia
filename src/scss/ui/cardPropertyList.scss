@@ -14,7 +14,8 @@
     align-items: center;
 
     .image {
-      height: 10rem;
+      height: calc(9.5rem + 2px);
+      width: 10rem;
       flex-shrink: 0;
       img {
         height: 100%;
@@ -37,7 +38,7 @@
     width: 100%;
 
     &:after {
-      width: 0.8rem;
+      width: 0.9rem;
       height: 1.8rem;
       display: block;
       content: '';
@@ -77,15 +78,25 @@
       padding: 1.2rem 2rem 1.2rem 1.2rem;
       width: 100%;
 
+      .initialCosts {
+        margin: 0.2rem 0;
+        li {
+          font-size: 1.2rem;
+        }
+      }
+
       .actions {
         display: flex;
         align-items: center;
         gap: 1.5rem;
         width: 100%;
+
+        .Cta {
+          width: 25rem;
+        }
       }
 
       .suggest {
-        border-radius: 100px 0 6rem 100px;
         background: rgba(247, 128, 142, 0.3);
         color: #ff4a76;
         font-size: 1rem;
@@ -105,11 +116,11 @@
           content: '';
           position: absolute;
           top: -0.89rem;
-          right: 0;
+          right: 0.9rem;
           width: 0;
           height: 0;
-          border-left: 1.2rem solid transparent;
-          border-right: 1.2rem solid transparent;
+          border-left: 0.65rem solid transparent;
+          border-right: 0.65rem solid transparent;
           border-bottom: 0.9rem solid rgba(247, 128, 142, 0.3);
         }
       }
@@ -117,7 +128,8 @@
   }
 
   .Favorite {
-    width: 2.5rem;
-    height: 2.2rem;
+    flex-shrink: 0;
+    width: 2.6rem;
+    height: 2.3rem;
   }
 }

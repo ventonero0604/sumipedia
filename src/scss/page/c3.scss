@@ -1,11 +1,11 @@
 .C3 {
-  padding: 3rem 1rem;
+  padding: 4.5rem 1rem;
 
   &_table {
     font-size: 1.1rem;
     text-align: left;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 2.4rem;
 
     th,
     td {
@@ -13,6 +13,10 @@
       border: 1px solid #cccccc;
       background: #f5f6f7;
       font-weight: normal;
+    }
+
+    .top {
+      vertical-align: top;
     }
 
     tr:nth-child(even) {

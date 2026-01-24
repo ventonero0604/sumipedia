@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
-import { Navigation, Thumbs } from 'swiper/modules';
+import { Navigation, Thumbs, Autoplay } from 'swiper/modules';
 import { validateName, validateEmail, validatePhoneNumber } from './validation.js';
 import noUiSlider from 'nouislider';
 import 'swiper/css';
@@ -1041,5 +1041,20 @@ if (document.querySelector('.D3')) {
 
     // .is-confirmから.is-applyに変更
     $('.D3').removeClass('is-confirm').addClass('is-apply');
+  });
+}
+
+// バナーカルーセル
+if ($('.B1').length || $('.B2').length) {
+  // カルーセル初期化
+  const bannerSwiper = new Swiper('.carousel', {
+    modules: [Autoplay],
+    loop: true,
+    autoplay: {
+      delay: 5000, // 5秒ごとに自動切り替え
+      disableOnInteraction: false
+    },
+    slidesPerView: 1,
+    spaceBetween: 0
   });
 }

@@ -3,7 +3,7 @@
     font-size: 1.3rem;
     color: #666;
     font-weight: 600;
-    padding: 1rem;
+    padding: 0.7rem 1.5rem 0.7rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,7 +20,7 @@
     position: relative;
 
     &:after {
-      width: 0.8rem;
+      width: 0.9rem;
       height: 1.8rem;
       display: block;
       content: '';
