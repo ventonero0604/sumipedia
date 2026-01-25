@@ -225,4 +225,16 @@
       gap: 0.5rem;
     }
   }
+
+  &.is-apply .Button-action {
+    &:before {
+      content: '申請する';
+    }
+  }
+
+  &.is-confirm .Button-action {
+    &:before {
+      content: '確認する';
+    }
+  }
 }
