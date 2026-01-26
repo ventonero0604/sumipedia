@@ -207,8 +207,6 @@
     }
 
     &_wrapper {
-      // width: 100vw;
-      // margin-left: calc(50% - 50vw);
       background: #dce7ec;
       display: grid;
       gap: 1rem;
@@ -283,14 +281,11 @@
 
         .is-highest & {
           &:after {
-            display: inline-block;
-            content: '最も高い';
-            border: 1px solid #ff5b5b;
-            color: #ff5b5b;
-            line-height: 1;
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 0.2rem 0.3rem;
+            width: 4.8rem;
+            height: 1.6rem;
+            background: center/contain no-repeat url('../../img/img-highest.svg');
+            display: block;
+            content: '';
           }
         }
 

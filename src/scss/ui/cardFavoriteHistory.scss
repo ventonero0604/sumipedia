@@ -12,7 +12,6 @@
   .main {
     display: flex;
     border-top: 1px solid #c6c6c6;
-    border-bottom: 1px solid #c6c6c6;
     background: #f9f9f9;
     align-items: center;
     gap: 1.5rem;
@@ -21,12 +20,12 @@
 
     &:after {
       width: 1.2rem;
-      height: 1.9rem;
+      height: 2rem;
       display: block;
       content: '';
       background: center/contain no-repeat url(../../img/ico-arrow.svg);
       position: absolute;
-      right: 2rem;
+      right: 2.4rem;
       top: 50%;
       transform: translateY(-50%);
     }

@@ -38,13 +38,13 @@
     width: 100%;
 
     &:after {
-      width: 0.9rem;
-      height: 1.8rem;
+      width: 1.2rem;
+      height: 2rem;
       display: block;
       content: '';
       background: center/contain no-repeat url(../../img/ico-arrow.svg);
       position: absolute;
-      right: 0.5rem;
+      right: 0.8rem;
       top: 50%;
       transform: translateY(-50%);
     }

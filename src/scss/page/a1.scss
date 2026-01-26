@@ -1,7 +1,7 @@
 .A1 {
   &_header {
     position: relative;
-    box-shadow: 0 0.3rem 0 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0.3rem 0.15rem 0 rgba(0, 0, 0, 0.16);
     display: grid;
 
     .SectionTitle {
@@ -58,7 +58,7 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         padding-right: 3rem;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6"><polygon points="0,0 9,0 4.5,6" fill="%2376B397"/></svg>');
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%225%22%20viewBox%3D%220%200%208%205%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M3.89648%204.5L-0.000629425%200H7.7936L3.89648%204.5Z%22%20fill%3D%22%232FB3BC%22%2F%3E%3C%2Fsvg%3E');
         background-repeat: no-repeat;
         background-position: right 1rem center;
         background-size: 1.2rem 0.6rem;

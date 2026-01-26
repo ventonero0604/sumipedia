@@ -228,13 +228,13 @@
 
   &.is-apply .Button-action {
     &:before {
-      content: '申請する';
+      content: '確認する';
     }
   }
 
   &.is-confirm .Button-action {
     &:before {
-      content: '確認する';
+      content: '申請する';
     }
   }
 }
