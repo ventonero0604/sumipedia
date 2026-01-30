@@ -27,52 +27,54 @@
       }
     }
 
-    .main-swiper {
-      .swiper-slide {
-        height: 24.8rem;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+    &_container {
+      .main-swiper {
+        .swiper-slide {
+          height: 24.8rem;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          width: 1.8rem;
+          height: 2.9rem;
+
+          svg {
+            display: none;
+          }
+        }
+
+        .swiper-button-prev {
+          background: center/contain no-repeat url(../../img/ico-swiper-left.svg);
+          left: 0;
+        }
+
+        .swiper-button-next {
+          background: center/contain no-repeat url(../../img/ico-swiper-right.svg);
+          right: 0;
         }
       }
 
-      .swiper-button-prev,
-      .swiper-button-next {
-        width: 1.8rem;
-        height: 2.9rem;
+      .thumbnail-swiper {
+        margin-top: 1rem;
 
-        svg {
-          display: none;
-        }
-      }
+        .swiper-slide {
+          height: 2.8rem;
+          width: 2.8rem;
+          opacity: 0.5;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
 
-      .swiper-button-prev {
-        background: center/contain no-repeat url(../../img/ico-swiper-left.svg);
-        left: 0;
-      }
-
-      .swiper-button-next {
-        background: center/contain no-repeat url(../../img/ico-swiper-right.svg);
-        right: 0;
-      }
-    }
-
-    .thumbnail-swiper {
-      margin-top: 1rem;
-
-      .swiper-slide {
-        height: 2.8rem;
-        width: 2.8rem;
-        opacity: 0.5;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        &-thumb-active {
-          opacity: 1;
+          &-thumb-active {
+            opacity: 1;
+          }
         }
       }
     }

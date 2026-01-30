@@ -13,7 +13,6 @@
       border-bottom: 1px solid #e3e8ea;
 
       svg {
-        width: 2rem;
         fill: currentColor;
         color: inherit;
         fill: var(--green);
@@ -51,7 +50,7 @@
         content: '';
         width: 0.6rem;
         height: 1.2rem;
-        background: center/cover no-repeat url('../..//img/ico-arrow-right-green.svg');
+        background: center/cover no-repeat url('../../img/ico-arrow-right-green.svg');
       }
     }
 

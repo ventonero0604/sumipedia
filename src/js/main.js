@@ -115,35 +115,6 @@ if ($('.A1').length) {
   });
 }
 
-// 画像モーダル処理
-$('.js-imageModal').on('click', function () {
-  const $img = $(this).find('img');
-  const imgSrc = $img.attr('src');
-  const imgAlt = $img.attr('alt');
-
-  // モーダルが存在しない場合は作成
-  if (!$('#imageModal').length) {
-    $('body').append(`
-      <div id="imageModal" class="ImageModal">
-        <button class="ImageModal_close js-modal-close"></button>
-        <div class="ImageModal_content">
-          <img src="" alt="">
-        </div>
-      </div>
-    `);
-  }
-
-  // モーダルに画像を設定して表示
-  $('#imageModal img').attr('src', imgSrc).attr('alt', imgAlt);
-  $('#imageModal').addClass('is-show');
-  $('body').css('overflow', 'hidden');
-
-  // アニメーション用に少し遅延
-  setTimeout(() => {
-    $('#imageModal').addClass('is-visible');
-  }, 10);
-});
-
 // モーダル表示処理
 $('.js-modal-open').on('click', function () {
   $('#Modal').addClass('is-show');
@@ -154,13 +125,106 @@ $('.js-modal-open').on('click', function () {
   }, 10);
 });
 
+// 画像モーダル処理
+$(document).on('click', '.js-imageModal', function (e) {
+  e.preventDefault();
+
+  // クリックされた画像のsrcを取得
+  const $clickedImg = $(this).find('img');
+  const clickedSrc = $clickedImg.attr('src');
+
+  // クリックされた要素から最も近いカード内のImageModalを探す
+  // .Cardがない場合は.A2、それもない場合はbody直下を探す
+  let $modal;
+  const $card = $(this).closest('.Card');
+
+  if ($card.length) {
+    $modal = $card.find('.ImageModal');
+  } else {
+    // A2ページなどCard構造がない場合
+    const $container = $(this).closest('.A2, main, body');
+    $modal = $container.find('.ImageModal').first();
+  }
+
+  if ($modal.length) {
+    // モーダルを表示
+    $modal.addClass('is-show');
+    $('body').css('overflow', 'hidden');
+
+    // アニメーション用に少し遅延
+    setTimeout(() => {
+      $modal.addClass('is-visible');
+    }, 10);
+
+    // Swiperがまだ初期化されていない場合は初期化
+    const $swiper = $modal.find('.js-image-swiper');
+    let swiperInstance = $swiper[0]?.swiper;
+
+    if ($swiper.length && !swiperInstance) {
+      // クリックされた画像に対応するスライドのインデックスを探す
+      let initialSlide = 0;
+      if (clickedSrc) {
+        $swiper.find('.swiper-slide img').each(function (index) {
+          const slideSrc = $(this).attr('src');
+          // パスの正規化（相対パスと絶対パスの違いを吸収）
+          const normalizedClickedSrc = clickedSrc.replace(/^\.\//, '/');
+          const normalizedSlideSrc = slideSrc.replace(/^\.\//, '/');
+
+          if (
+            normalizedClickedSrc === normalizedSlideSrc ||
+            clickedSrc.endsWith(slideSrc) ||
+            slideSrc.endsWith(clickedSrc)
+          ) {
+            initialSlide = index;
+            return false; // break
+          }
+        });
+      }
+
+      swiperInstance = new Swiper($swiper[0], {
+        modules: [Navigation],
+        loop: true,
+        initialSlide: initialSlide,
+        navigation: {
+          nextEl: $modal.find('.swiper-button-next')[0],
+          prevEl: $modal.find('.swiper-button-prev')[0]
+        }
+      });
+    } else if (swiperInstance && clickedSrc) {
+      // 既に初期化されている場合は、クリックされた画像のスライドに移動
+      let targetSlide = 0;
+      $swiper.find('.swiper-slide img').each(function (index) {
+        const slideSrc = $(this).attr('src');
+        const normalizedClickedSrc = clickedSrc.replace(/^\.\//, '/');
+        const normalizedSlideSrc = slideSrc.replace(/^\.\//, '/');
+
+        if (
+          normalizedClickedSrc === normalizedSlideSrc ||
+          clickedSrc.endsWith(slideSrc) ||
+          slideSrc.endsWith(clickedSrc)
+        ) {
+          targetSlide = index;
+          return false; // break
+        }
+      });
+
+      swiperInstance.slideToLoop(targetSlide, 0);
+    }
+  }
+});
+
 // モーダルを閉じる処理
-$(document).on('click', '.js-modal-close, #imageModal', function (e) {
-  if ($(e.target).is('#imageModal') || $(e.target).hasClass('js-modal-close')) {
-    $('#imageModal').removeClass('is-visible');
+$(document).on('click', '.js-modal-close, #imageModal, #Modal, .ImageModal', function (e) {
+  const $target = $(e.target);
+  const $close = $target.closest('.js-modal-close');
+
+  if ($target.is('#imageModal, #Modal, .ImageModal') || $close.length) {
+    const $modal = $target.closest('#imageModal, #Modal, .ImageModal');
+
+    $modal.removeClass('is-visible');
 
     setTimeout(() => {
-      $('#imageModal').removeClass('is-show');
+      $modal.removeClass('is-show');
       $('body').css('overflow', '');
     }, 300);
   }
@@ -297,27 +361,98 @@ if ($('.A3').length) {
     $('.email-domains').removeClass('is-show');
   });
 
-  // 編集ボタンの処理
-  $('.js-edit-button-1, .js-edit-button-2').on('click', function () {
-    const $button = $(this);
-    const stepNum = $button.hasClass('js-edit-button-1') ? 1 : 2;
+  // Modal state
+  let currentEditStep = null;
 
-    if ($button.hasClass('cancel')) {
-      // キャンセル：元のステップに戻る
-      $button.removeClass('cancel');
-      $('.js-edit-button-1, .js-edit-button-2, .js-edit-button-3').removeClass('is-hidden');
-      showInputStep(currentStep);
-    } else {
-      // 編集開始
-      $button.addClass('cancel');
-      // 他のステップの編集ボタンをリセット・非表示
-      $('.js-edit-button-3').removeClass('cancel').addClass('is-hidden');
-      const otherStepNum = stepNum === 1 ? 2 : 1;
-      $(`.js-edit-button-${otherStepNum}`).addClass('is-hidden');
-      showInputStep(stepNum);
-      $('.A3').removeClass('is-complete');
-    }
+  // Open edit modal
+  const openEditModal = (step, currentValue, title) => {
+    currentEditStep = step;
+    $('.js-modal-title').text(title);
+    $('.js-modal-input').val(currentValue);
+    $('.js-modal-error').removeClass('is-show').text('');
+    $('.js-edit-modal').addClass('is-show');
+    $('body').css('overflow', 'hidden');
+
+    setTimeout(() => {
+      $('.js-edit-modal').addClass('is-visible');
+      $('.js-modal-input').focus();
+    }, 10);
+  };
+
+  // Close edit modal
+  const closeEditModal = () => {
+    $('.js-edit-modal').removeClass('is-visible');
+
+    setTimeout(() => {
+      $('.js-edit-modal').removeClass('is-show');
+      $('.js-modal-error').removeClass('is-show').text('');
+      $('body').css('overflow', '');
+      currentEditStep = null;
+    }, 300);
+  };
+
+  // Edit button handlers
+  $('.js-edit-button-1').on('click', function () {
+    const currentValue = $('.js-step-1-answer-value').first().text().trim();
+    openEditModal(1, currentValue, 'お名前を修正してください');
   });
+
+  $('.js-edit-button-2').on('click', function () {
+    const currentValue = $('.js-step-2-answer-value').first().text().trim();
+    openEditModal(2, currentValue, 'メールアドレスを修正してください');
+  });
+
+  $('.js-edit-button-3').on('click', function () {
+    const currentValue = $('.js-step-3-answer-value').first().text().trim();
+    const value = currentValue === '入力なし' ? '' : currentValue;
+    openEditModal(3, value, '電話番号を修正してください');
+  });
+
+  // Clear error on input
+  $('.js-modal-input').on('input', function () {
+    $('.js-modal-error').removeClass('is-show').text('');
+  });
+
+  // Modal confirm button
+  $('.js-modal-confirm').on('click', function () {
+    const value = $('.js-modal-input').val();
+
+    if (currentEditStep === 1) {
+      const error = validateName(value);
+      if (error) {
+        $('.js-modal-error').text(error).addClass('is-show');
+        return;
+      }
+      $('.js-step-1-answer-value').text(value.trim());
+      $('.A3_complete_table .js-step-1-answer-value').text(value.trim());
+    } else if (currentEditStep === 2) {
+      const error = validateEmail(value);
+      if (error) {
+        $('.js-modal-error').text(error).addClass('is-show');
+        return;
+      }
+      $('.js-step-2-answer-value').text(value.trim());
+      $('.A3_complete_table .js-step-2-answer-value').text(value.trim());
+    } else if (currentEditStep === 3) {
+      const error = validatePhoneNumber(value);
+      if (error) {
+        $('.js-modal-error').text(error).addClass('is-show');
+        return;
+      }
+      if (value.trim()) {
+        $('.js-step-3-answer-value').text(value.trim());
+        $('.A3_complete_table .js-step-3-answer-value').text(value.trim());
+      } else {
+        $('.js-step-3-answer-value').text('入力なし');
+        $('.A3_complete_table .js-step-3-answer-value').text('―');
+      }
+    }
+
+    closeEditModal();
+  });
+
+  // Close modal on overlay click
+  $('.js-modal-overlay').on('click', closeEditModal);
 
   // ステップ情報を更新
   updateStepInfo(currentStep);
@@ -339,10 +474,6 @@ if ($('.A3').length) {
     $('.js-step-1-answer-value').text(value.trim());
     $('.A3_complete_table .js-step-1-answer-value').text(value.trim());
     $('.js-step-1-answer').hide().addClass('is-active').fadeIn(300);
-
-    // 編集状態をリセット
-    $('.js-edit-button-1').removeClass('cancel');
-    $('.js-edit-button-2').show();
 
     setTimeout(() => {
       if (currentStep === 1) {
@@ -372,10 +503,6 @@ if ($('.A3').length) {
     $('.js-step-2-answer-value').text(value.trim());
     $('.A3_complete_table .js-step-2-answer-value').text(value.trim());
     $('.js-step-2-answer').hide().addClass('is-active').fadeIn(300);
-
-    // 編集状態をリセット
-    $('.js-edit-button-2').removeClass('cancel');
-    $('.js-edit-button-1').show();
 
     setTimeout(() => {
       currentStep = 3;
@@ -407,32 +534,9 @@ if ($('.A3').length) {
 
     $('.js-step-3-answer').hide().addClass('is-active').fadeIn(300);
 
-    // 編集状態をリセット
-    $('.js-edit-button-3').removeClass('cancel');
-
     setTimeout(() => {
-      $('.js-edit-button-1, .js-edit-button-2, .js-edit-button-3').removeClass('is-hidden');
       $('.A3').addClass('is-complete');
     }, 500);
-  });
-
-  // 編集ボタンの処理（ステップ3）
-  $('.js-edit-button-3').on('click', function () {
-    const $button = $(this);
-
-    if ($button.hasClass('cancel')) {
-      // キャンセル：元のステップに戻る
-      $button.removeClass('cancel');
-      $('.js-edit-button-1, .js-edit-button-2, .js-edit-button-3').removeClass('is-hidden');
-      showInputStep(3);
-    } else {
-      // 編集開始
-      $button.addClass('cancel');
-      // 他のステップの編集ボタンをリセット・非表示
-      $('.js-edit-button-1, .js-edit-button-2').removeClass('cancel').addClass('is-hidden');
-      showInputStep(3);
-      $('.A3').removeClass('is-complete');
-    }
   });
 
   // スキップボタンの処理
