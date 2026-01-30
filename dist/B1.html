@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header class="Header">
+    <div class="content">
+      <h1 class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+      </h1>
+      <h2 class="lead">
+        埼玉県の賃貸物件サイト
+      </h2>
+    </div>
+    <ul class="buttons">
+      <li class="button">
+        <a href="#">
+          <img src="./img/ico-fav.svg" alt="" class="fav">
+          <span class="count js-fav-count">10</span>
+          お気に入り
+        </a>
+      </li>
+      <li class="button">
+        <a href="#">
+          <img src="./img/ico-history.svg" alt="" class="history">
+          閲覧履歴
+        </a>
+      </li>
+    </ul>
+  </header>
+  <main class="B1">
+    <section class="B1_content">
+      <div class="carousel swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a class="Banner" href="#">
+              <img src="./img/bnr-cashback.png" alt="50,000円現金キャッシュバック">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="Banner" href="#">
+              <img src="./img/bnr-info.png" alt="掲載物件700万件以上 全国賃貸情報サイト">
+            </a>
+          </div>
+        </div>
+      </div>
+      <h2 class="B1_title">
+        都道府県を選択
+      </h2>
+
+      <ul class="PrefList">
+        <li class="PrefList_item">
+          <button type="button" class="js-expand">
+            北海道･東北
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="10" transform="rotate(180 10 10)" fill="" />
+              <path d="M14 8L10.097 12L6 8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+          <ul class="PrefList_details js-content">
+            <li class="PrefList_detail">
+              <a href="#">北海道</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">青森県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">岩手県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">宮城県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">秋田県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">山形県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">福島県</a>
+            </li>
+          </ul>
+        </li>
+        <li class="PrefList_item">
+          <button type="button" class="js-expand">
+            関東
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="10" transform="rotate(180 10 10)" fill="" />
+              <path d="M14 8L10.097 12L6 8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+          <ul class="PrefList_details js-content">
+            <li class="PrefList_detail">
+              <a href="#">茨城県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">栃木県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">群馬県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">埼玉県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">千葉県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">東京都</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">神奈川県</a>
+            </li>
+          </ul>
+        </li>
+        <li class="PrefList_item">
+          <button type="button" class="js-expand">
+            甲信越･北陸
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="10" transform="rotate(180 10 10)" fill="" />
+              <path d="M14 8L10.097 12L6 8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+          <ul class="PrefList_details js-content">
+            <li class="PrefList_detail">
+              <a href="#">新潟県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">富山県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">石川県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">福井県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">山梨県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">長野県</a>
+            </li>
+          </ul>
+        </li>
+        <li class="PrefList_item">
+          <button type="button" class="js-expand">
+            東海
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="10" transform="rotate(180 10 10)" fill="" />
+              <path d="M14 8L10.097 12L6 8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+          <ul class="PrefList_details js-content">
+            <li class="PrefList_detail">
+              <a href="#">岐阜県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">静岡県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">愛知県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">三重県</a>
+            </li>
+          </ul>
+        </li>
+        <li class="PrefList_item">
+          <button type="button" class="js-expand">
+            関西
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="10" transform="rotate(180 10 10)" fill="" />
+              <path d="M14 8L10.097 12L6 8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+          <ul class="PrefList_details js-content">
+            <li class="PrefList_detail">
+              <a href="#">滋賀県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">京都府</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">大阪府</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">兵庫県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">奈良県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">和歌山県</a>
+            </li>
+          </ul>
+        </li>
+        <li class="PrefList_item">
+          <button type="button" class="js-expand">
+            中国
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="10" transform="rotate(180 10 10)" fill="" />
+              <path d="M14 8L10.097 12L6 8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+          <ul class="PrefList_details js-content">
+            <li class="PrefList_detail">
+              <a href="#">鳥取県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">島根県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">岡山県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">広島県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">山口県</a>
+            </li>
+          </ul>
+        </li>
+        <li class="PrefList_item">
+          <button type="button" class="js-expand">
+            四国
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="10" transform="rotate(180 10 10)" fill="" />
+              <path d="M14 8L10.097 12L6 8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+          <ul class="PrefList_details js-content">
+            <li class="PrefList_detail">
+              <a href="#">徳島県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">香川県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">愛媛県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">高知県</a>
+            </li>
+          </ul>
+        </li>
+        <li class="PrefList_item">
+          <button type="button" class="js-expand">
+            九州･沖縄
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="10" transform="rotate(180 10 10)" fill="" />
+              <path d="M14 8L10.097 12L6 8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+          <ul class="PrefList_details js-content">
+            <li class="PrefList_detail">
+              <a href="#">福岡県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">佐賀県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">長崎県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">熊本県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">大分県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">宮崎県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">鹿児島県</a>
+            </li>
+            <li class="PrefList_detail">
+              <a href="#">沖縄県</a>
+            </li>
+          </ul>
+        </li>
+      </ul>    </section>
+
+  </main>
+
+  <footer class="Footer">
+    <div class="wrapper">
+      <div class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+      </div>
+      <div class="content">
+        <ul class="list">
+          <li>
+            <a href="#">
+              運営会社
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              利用規約
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              プライバシーポリシー
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+        <small>
+          ©住みペディア
+        </small>
+      </div>
+    </div>
+  </footer>  
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

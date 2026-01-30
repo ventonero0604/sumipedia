@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header class="Header Header-contact">
+    <div class="content">
+      <h1 class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+      </h1>
+      <h2 class="lead">
+        埼玉県の賃貸物件サイト
+      </h2>
+    </div>
+    <h3 class="title">
+      お問い合わせ
+    </h3>
+  </header>
+  <main class="A3">
+    <section class="A3_items">
+      <article class="CardSmall">
+        <div class="main">
+          <figure class="image">
+            <img src="./img/dummy/thumb.png" alt="">
+          </figure>
+          <div class="Card_texts">
+            <div class="texts">
+              <p class="text">
+                さくら荘 | 1階 | ワンルーム |
+              </p>
+            </div>
+            <p class="price">
+              <span class="fee">18.5</span>
+              <span class="en">万円</span>
+              (管理費<span class="manage">なし</span>)
+            </p>
+            <ul class="initialCosts">
+              <li>
+                <img class="Label" src="./img/ico-shiki-gray.svg" alt="敷">
+                9.6万円
+              </li>
+              <li class="green">
+                <img class="Label" src="./img/ico-rei-green.svg" alt="礼">
+                0円
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="expand js-card-expand">
+            <img src="./img/ico-triangle-down.svg" alt="">
+            <span>
+              開く
+            </span>
+          </button>
+        </div>
+      </article>
+      <div class="A3_items_expand js-items-expand">
+        <article class="CardSmall">
+          <div class="main">
+            <figure class="image">
+              <img src="./img/dummy/thumb.png" alt="">
+            </figure>
+            <div class="Card_texts">
+              <div class="texts">
+                <p class="text">
+                  さくら荘 | 1階 | ワンルーム |
+                </p>
+              </div>
+              <p class="price">
+                <span class="fee">18.5</span>
+                <span class="en">万円</span>
+                (管理費<span class="manage">なし</span>)
+              </p>
+              <ul class="initialCosts">
+                <li>
+                  <img class="Label" src="./img/ico-shiki-gray.svg" alt="敷">
+                  9.6万円
+                </li>
+                <li class="green">
+                  <img class="Label" src="./img/ico-rei-green.svg" alt="礼">
+                  0円
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="CardSmall">
+          <div class="main">
+            <figure class="image">
+              <img src="./img/dummy/thumb.png" alt="">
+            </figure>
+            <div class="Card_texts">
+              <div class="texts">
+                <p class="text">
+                  さくら荘 | 1階 | ワンルーム |
+                </p>
+              </div>
+              <p class="price">
+                <span class="fee">18.5</span>
+                <span class="en">万円</span>
+                (管理費<span class="manage">なし</span>)
+              </p>
+              <ul class="initialCosts">
+                <li>
+                  <img class="Label" src="./img/ico-shiki-gray.svg" alt="敷">
+                  9.6万円
+                </li>
+                <li class="green">
+                  <img class="Label" src="./img/ico-rei-green.svg" alt="礼">
+                  0円
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="A3_chat">
+      <h2 class="A3_chat_header">
+        <b>2つの質問</b>に答えるだけでお問い合わせができます。
+      </h2>
+      <div class="A3_chat_content">
+        <p class="A3_chat_question js-step-1-question is-active">
+          まずはお名前を教えてください。
+        </p>
+        <div class="A3_chat_answer js-step-1-answer">
+          <div class="A3_chat_answer_value">
+            <span class="title">
+              お名前
+            </span>
+            <span class="value js-value js-step-1-answer-value">
+            </span>
+          </div>
+          <button type="button" class="edit js-edit-button-1"></button>
+        </div>
+
+        <p class="A3_chat_question js-step-2-question">
+          次にメールアドレスを教えてください。
+        </p>
+        <div class="A3_chat_answer js-step-2-answer">
+          <div class="A3_chat_answer_value">
+            <span class="title">
+              メールアドレス
+            </span>
+            <span class="value js-step-2-answer-value">
+            </span>
+          </div>
+          <button type="button" class="edit js-edit-button-2"></button>
+        </div>
+
+        <p class="A3_chat_question js-step-3-question">
+          <span class="note">
+            ※キャッシュバックキャンペーンに応募される場合は必須です
+          </span>
+          電話番号を教えてください（任意）
+        </p>
+        <div class="A3_chat_answer js-step-3-answer">
+          <div class="A3_chat_answer_value">
+            <span class="title">
+              電話番号
+            </span>
+            <span class="value js-step-3-answer-value">
+              入力なし
+            </span>
+          </div>
+          <button type="button" class="edit js-edit-button-3"></button>
+        </div>
+      </div>
+
+      <div class="A3_chat_input">
+        <div class="A3_chat_input_info">
+          <p class="A3_chat_input_title">
+            残り<em class="js-steps">3</em>ステップで完了
+          </p>
+          <div class="A3_chat_input_indicator">
+            <i class=""></i>
+            <i class=""></i>
+            <i class=""></i>
+          </div>
+        </div>
+
+        <div class="A3_chat_input_actions js-input-step-1 is-active">
+          <div class="box">
+            <input id="input-field-1" class="input-field js-input-field-1" type="text">
+            <span class="placeholder">
+              <span class="small-text">お名前</span>
+              <span class="normal-text">例）やまだ太郎</span>
+            </span>
+            <p class="error js-input-error-1"></p>
+            <span class="label required">必須</span>
+          </div>
+          <button type="button" class="submit-button js-submit-step-1">
+            次へ
+          </button>
+        </div>
+
+        <div class="A3_chat_input_actions js-input-step-2">
+          <div class="box">
+            <div class="email-domains">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="js-email-domain">@gmail.com</td>
+                    <td class="js-email-domain">@yahoo.com</td>
+                  </tr>
+                  <tr>
+                    <td class="js-email-domain">@au.com</td>
+                    <td class="js-email-domain">@ezweb.ne.jp</td>
+                  </tr>
+                  <tr>
+                    <td class="js-email-domain">@docomo.ne.jp</td>
+                    <td class="js-email-domain">@softbank.ne.jp</td>
+                  </tr>
+                  <tr>
+                    <td class="js-email-domain">@i.softbank.jp</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <input id="input-field-2" class="input-field js-input-field-2" type="email">
+            <span class="placeholder">
+              <span class="small-text">メールアドレス</span>
+              <span class="normal-text">例)test@example.com</span>
+            </span>
+            <p class="error js-input-error-2"></p>
+            <span class="label required">必須</span>
+          </div>
+          <button type="button" class="submit-button js-submit-step-2">
+            次へ
+          </button>
+        </div>
+
+        <div class="A3_chat_input_actions js-input-step-3">
+          <div class="box">
+            <input id="input-field-3" class="input-field js-input-field-3" type="tel">
+            <span class="placeholder">
+              <span class="small-text">電話番号</span>
+              <span class="normal-text">例)08012345678</span>
+            </span>
+            <p class="error js-input-error-3"></p>
+            <span class="label">任意</span>
+          </div>
+          <button type="button" class="submit-button js-submit-step-3">
+            次へ
+          </button>
+        </div>
+      </div>
+      <button class="A3_chat_skip" type="button">入力をスキップ</button>
+    </section>
+
+    <!-- Edit Modal -->
+    <div class="A3_edit_modal js-edit-modal">
+      <div class="A3_edit_modal_overlay js-modal-overlay"></div>
+      <div class="A3_edit_modal_content">
+        <p class="A3_edit_modal_title js-modal-title"></p>
+        <div class="A3_edit_modal_input">
+          <input type="text" class="input-field js-modal-input" />
+          <button type="button" class="confirm-button js-modal-confirm">確定</button>
+        </div>
+        <p class="A3_edit_modal_error js-modal-error"></p>
+      </div>
+    </div>
+
+    <section class="A3_complete">
+      <div class="A3_complete_header">
+        <p class="green">
+          まだお問合せは完了していません
+        </p>
+        <p>
+          入力内容を確認し<br>
+          <span class="green">ページ下部へお進みください</span>
+        </p>
+      </div>
+      <div class="A3_complete_content">
+        <h3 class="A3_complete_title">
+          お問い合わせ内容
+          <button type="button" class="button js-scrollToTop">修正する</button>
+        </h3>
+        <table class="A3_complete_table">
+          <tbody>
+            <tr>
+              <th>
+                お名前
+              </th>
+              <td class="js-step-1-answer-value">
+              </td>
+            </tr>
+            <tr>
+              <th>
+                メールアドレス
+              </th>
+              <td class="js-step-2-answer-value">
+              </td>
+            </tr>
+            <tr>
+              <th>
+                電話番号
+              </th>
+              <td class="js-step-3-answer-value">
+                ―
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 class="A3_complete_title">
+          お問い合わせする物件
+        </h3>
+        <div class="A3_items">
+          <article class="CardSmall">
+            <div class="main">
+              <figure class="image">
+                <img src="./img/dummy/thumb.png" alt="">
+              </figure>
+              <div class="Card_texts">
+                <div class="texts">
+                  <p class="text">
+                    さくら荘 | 1階 | ワンルーム |
+                  </p>
+                </div>
+                <p class="price">
+                  <span class="fee">18.5</span>
+                  <span class="en">万円</span>
+                  (管理費<span class="manage">なし</span>)
+                </p>
+                <ul class="initialCosts">
+                  <li>
+                    <img class="Label" src="./img/ico-shiki-gray.svg" alt="敷">
+                    9.6万円
+                  </li>
+                  <li class="green">
+                    <img class="Label" src="./img/ico-rei-green.svg" alt="礼">
+                    0円
+                  </li>
+                </ul>
+              </div>
+              <button type="button" class="expand js-card-expand">
+                <img src="./img/ico-triangle-down.svg" alt="">
+                <span>
+                  開く
+                </span>
+              </button>
+            </div>
+          </article>
+          <div class="A3_items_expand js-items-expand">
+            <article class="CardSmall">
+              <div class="main">
+                <figure class="image">
+                  <img src="./img/dummy/thumb.png" alt="">
+                </figure>
+                <div class="Card_texts">
+                  <div class="texts">
+                    <p class="text">
+                      さくら荘 | 1階 | ワンルーム |
+                    </p>
+                  </div>
+                  <p class="price">
+                    <span class="fee">18.5</span>
+                    <span class="en">万円</span>
+                    (管理費<span class="manage">なし</span>)
+                  </p>
+                  <ul class="initialCosts">
+                    <li>
+                      <img class="Label" src="./img/ico-shiki-gray.svg" alt="敷">
+                      9.6万円
+                    </li>
+                    <li class="green">
+                      <img class="Label" src="./img/ico-rei-green.svg" alt="礼">
+                      0円
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="CardSmall">
+              <div class="main">
+                <figure class="image">
+                  <img src="./img/dummy/thumb.png" alt="">
+                </figure>
+                <div class="Card_texts">
+                  <div class="texts">
+                    <p class="text">
+                      さくら荘 | 1階 | ワンルーム |
+                    </p>
+                  </div>
+                  <p class="price">
+                    <span class="fee">18.5</span>
+                    <span class="en">万円</span>
+                    (管理費<span class="manage">なし</span>)
+                  </p>
+                  <ul class="initialCosts">
+                    <li>
+                      <img class="Label" src="./img/ico-shiki-gray.svg" alt="敷">
+                      9.6万円
+                    </li>
+                    <li class="green">
+                      <img class="Label" src="./img/ico-rei-green.svg" alt="礼">
+                      0円
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="A3_complete_addition">
+        <figure class="A3_complete_addition_title">
+          <img class="w-full" src="./img/img-check-with-contact.svg" alt="チェックするだけで一緒にお問い合わせできます">
+        </figure>
+        <div class="A3_complete_addition_items">
+          <article class="Card CardRecommendSmall">
+            <label class="title">
+              <input type="checkbox" class="Checkbox" id="fav-1" name="fav-1">
+              中野林戸建
+            </label>
+            <div class="main">
+              <div class="container">
+                <p class="label">お気に入り登録済み</p>
+                <figure class="image">
+                  <img src="./img/dummy/thumb.png" alt="">
+                </figure>
+              </div>
+              <div class="Card_texts">
+                <p class="price">
+                  <span class="fee">18.5</span>
+                  <span class="en">万円</span>
+                  (管理費<span class="manage">なし</span>)
+                </p>
+                <ul class="initialCosts">
+                  <li>
+                    <img class="Label" src="./img/ico-shiki-gray.svg" alt="敷">
+                    9.6万円
+                  </li>
+                  <li class="green">
+                    <img class="Label" src="./img/ico-rei-green.svg" alt="礼">
+                    0円
+                  </li>
+                </ul>
+                <div class="texts">
+                  <p class="text">
+                    272.84㎡ / 6LDK / 1-3階
+                  </p>
+                  <p class="text">
+                    JR京浜東北線/大宮駅 バス12分
+                  </p>
+                  <p class="text">
+                    (バス停)観音寺前 歩6分
+                  </p>
+          
+                </div>
+              </div>
+            </div>
+          
+          </article>          <article class="Card CardRecommendSmall">
+            <label class="title">
+              <input type="checkbox" class="Checkbox" id="fav-1" name="fav-1">
+              中野林戸建
+            </label>
+            <div class="main">
+              <div class="container">
+                <p class="label">お気に入り登録済み</p>
+                <figure class="image">
+                  <img src="./img/dummy/thumb.png" alt="">
+                </figure>
+              </div>
+              <div class="Card_texts">
+                <p class="price">
+                  <span class="fee">18.5</span>
+                  <span class="en">万円</span>
+                  (管理費<span class="manage">なし</span>)
+                </p>
+                <ul class="initialCosts">
+                  <li>
+                    <img class="Label" src="./img/ico-shiki-gray.svg" alt="敷">
+                    9.6万円
+                  </li>
+                  <li class="green">
+                    <img class="Label" src="./img/ico-rei-green.svg" alt="礼">
+                    0円
+                  </li>
+                </ul>
+                <div class="texts">
+                  <p class="text">
+                    272.84㎡ / 6LDK / 1-3階
+                  </p>
+                  <p class="text">
+                    JR京浜東北線/大宮駅 バス12分
+                  </p>
+                  <p class="text">
+                    (バス停)観音寺前 歩6分
+                  </p>
+          
+                </div>
+              </div>
+            </div>
+          
+          </article>          <p class="A3_complete_addition_note">
+            当社（a-works株式会社）は、当社が取得するお客様の個人情報・個人関連情報等を、<a href="#">プライバシーポリシー</a>に従い取り扱います。<br>
+            お問い合わせ情報の取り扱いについては<a href="#">こちら</a>もご確認の上、サービスをご利用ください。<br>
+            上記に同意の上、入力内容を確認し、問題なければ「送信する」ボタンを押してください。
+          </p>
+          <a href="A3_complete.html" class="Button Button-action">送信する</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="Footer">
+    <div class="wrapper between">
+      <div class="logo">
+        <a href="#">
+          <img src="./img/logo.svg" alt="住みぺディア">
+        </a>
+      </div>
+      <small>
+        ©住みペディア
+      </small>
+    </div>
+  </footer>  
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
