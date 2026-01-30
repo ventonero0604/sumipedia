@@ -191,9 +191,7 @@
 
       .image {
         height: 17.5rem;
-
-        &:after {
-        }
+        display: block;
 
         img {
           object-fit: cover;
